@@ -1,38 +1,38 @@
 package com.gaode.route.service;
 
-import com.gaode.route.dao.MapsqlUtil;
-import com.gaode.route.pojo.OrgLoaction;
+import com.gaode.route.dao.MySqlUtils;
+import com.gaode.route.pojo.OrgLocation;
 
 import java.math.BigDecimal;
 
 
 import javax.servlet.http.HttpServletRequest;
 
-/***
- * map
- * @author gw00089267
- *
+/**
+ * @Description MySQL Config file
+ * @Author Tyler Yin
  */
 public class MapService {
 
-    public static String getorgloc() {
-        String orgloc = MapsqlUtil.getorgloc();
-        return orgloc;
+    public static String getOrgLocation() {
+        return MySqlUtils.getOrgLocation();
     }
 
-    public static String saveorgloc(HttpServletRequest request) {
+    public static String saveOrgLocation(HttpServletRequest request) {
         String org = request.getParameter("org");
-        String polydatas = request.getParameter("polydatas");
-        String[] polydatasArray = polydatas.split(";");
-        for (String po : polydatasArray) {
+        String polyData = request.getParameter("polyData");
+        String[] polyDataArray = polyData.split(";");
+
+        MySqlUtils.deleteOrgLocation();
+        for (String po : polyDataArray) {
             String[] pos = po.split(",");
-            OrgLoaction ol = new OrgLoaction();
+            OrgLocation ol = new OrgLocation();
             ol.setLng(new BigDecimal(pos[0]));
             ol.setLat(new BigDecimal(pos[1]));
-            ol.setOrgcode(Integer.parseInt(org));
-            MapsqlUtil.saveorgloc(ol);
+            ol.setOrgCode(Integer.parseInt(org));
+            MySqlUtils.saveOrgLocation(ol);
         }
-        System.out.println(polydatas);
+        System.out.println(polyData);
         return null;
     }
 }

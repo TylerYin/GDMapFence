@@ -2,10 +2,14 @@ package com.gaode.route.pojo;
 
 import java.math.BigDecimal;
 
-public class OrgLoaction {
+/**
+ * @Description POJO
+ * @Author Tyler Yin
+ */
+public class OrgLocation {
 
     private int id;
-    private int orgcode;
+    private int orgCode;
     private BigDecimal lng;
     private BigDecimal lat;
     private int type;
@@ -19,12 +23,12 @@ public class OrgLoaction {
         this.id = id;
     }
 
-    public int getOrgcode() {
-        return orgcode;
+    public int getOrgCode() {
+        return orgCode;
     }
 
-    public void setOrgcode(int orgcode) {
-        this.orgcode = orgcode;
+    public void setOrgCode(int orgCode) {
+        this.orgCode = orgCode;
     }
 
     public BigDecimal getLng() {

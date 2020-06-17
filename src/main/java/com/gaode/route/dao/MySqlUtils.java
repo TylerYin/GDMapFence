@@ -8,23 +8,24 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gaode.route.pojo.OrgLoaction;
+import com.gaode.route.pojo.OrgLocation;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 /**
- * Mysql数据库操作类
+ * @Description MySQL数据库操作类
+ * @Author Tyler Yin
  */
-public class MapsqlUtil {
+public class MySqlUtils {
     /**
      * 获取Mysql数据库连接
      *
      * @return Connection
      */
     private Connection getConn() {
-        String url = SqlUtil.url;
-        String username = SqlUtil.username;
-        String password = SqlUtil.password;
+        String url = JdbcConfig.url;
+        String username = JdbcConfig.username;
+        String password = JdbcConfig.password;
         Connection conn = null;
         try {
             // 加载MySQL驱动
@@ -65,23 +66,23 @@ public class MapsqlUtil {
      *
      * @return
      */
-    public static String getPeizhinameSub(String btyenum, String bytesort, String byteinfo) {
-        String infoname = "";
+    public static String getPeiZhiNameSub(String byteNum, String byteSort, String byteInfo) {
+        String infoName = "";
         String sql = "select infoname from peizhiinfo where bytenum=? and bytesort=? and infonum=?";
 
-        MapsqlUtil mysqlUtil = new MapsqlUtil();
+        MySqlUtils mysqlUtil = new MySqlUtils();
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
             conn = mysqlUtil.getConn();
             ps = conn.prepareStatement(sql);
-            ps.setString(1, btyenum);
-            ps.setString(2, bytesort);
-            ps.setString(3, byteinfo);
+            ps.setString(1, byteNum);
+            ps.setString(2, byteSort);
+            ps.setString(3, byteInfo);
             rs = ps.executeQuery();
             if (rs.next()) {
-                infoname = rs.getString("infoname");
+                infoName = rs.getString("infoName");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -89,18 +90,18 @@ public class MapsqlUtil {
             // 释放资源
             mysqlUtil.releaseResources(conn, ps, rs);
         }
-        return infoname;
+        return infoName;
     }
 
-    public static String getorgloc() {
-        JSONArray jarr = new JSONArray();
-        List<String> ll = new ArrayList<String>();
+    public static String getOrgLocation() {
+        JSONArray jsonArray = new JSONArray();
+        List<String> list = new ArrayList<>();
         String sql = "select * from orgloaction ";
 
-        MapsqlUtil mysqlUtil = new MapsqlUtil();
+        ResultSet rs = null;
         Connection conn = null;
         PreparedStatement ps = null;
-        ResultSet rs = null;
+        MySqlUtils mysqlUtil = new MySqlUtils();
         try {
             conn = mysqlUtil.getConn();
             ps = conn.prepareStatement(sql);
@@ -108,11 +109,11 @@ public class MapsqlUtil {
             rs = ps.executeQuery();
             while (rs.next()) {
                 String ss = "[" + rs.getBigDecimal("lng") + "," + rs.getBigDecimal("lat") + "]";
-                ll.add(ss);
+                list.add(ss);
                 JSONObject jb = new JSONObject();
                 jb.put("lng", rs.getBigDecimal("lng"));
                 jb.put("lat", rs.getBigDecimal("lat"));
-                jarr.add(jb);
+                jsonArray.add(jb);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -120,20 +121,19 @@ public class MapsqlUtil {
             // 释放资源
             mysqlUtil.releaseResources(conn, ps, rs);
         }
-        return jarr.toString();
+        return jsonArray.toString();
     }
 
-    public static void saveorgloc(OrgLoaction ol) {
-
-        String sql = "insert into orgloaction( orgcode, lng, lat, type) values(?, ?, ?, '1')";
-        MapsqlUtil mysqlUtil = new MapsqlUtil();
+    public static void saveOrgLocation(OrgLocation ol) {
+        String sql = "insert into orgloaction(orgcode, lng, lat, type) values(?, ?, ?, '1')";
+        MySqlUtils mySqlUtils = new MySqlUtils();
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
-            conn = mysqlUtil.getConn();
+            conn = mySqlUtils.getConn();
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, ol.getOrgcode());
+            ps.setInt(1, ol.getOrgCode());
             ps.setBigDecimal(2, ol.getLng());
             ps.setBigDecimal(3, ol.getLat());
             ps.executeUpdate();
@@ -141,7 +141,28 @@ public class MapsqlUtil {
             e.printStackTrace();
         } finally {
             // 释放资源
-            mysqlUtil.releaseResources(conn, ps, rs);
+            mySqlUtils.releaseResources(conn, ps, rs);
+        }
+    }
+
+    /**
+     * 删除围栏数据
+     */
+    public static void deleteOrgLocation() {
+        String sql = "DELETE FROM orgloaction";
+        MySqlUtils mySqlUtils = new MySqlUtils();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            conn = mySqlUtils.getConn();
+            ps = conn.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // 释放资源
+            mySqlUtils.releaseResources(conn, ps, rs);
         }
     }
 }

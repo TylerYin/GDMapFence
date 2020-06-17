@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * @author Tyler
+ * @Description MySQL Config file
+ * @Author Tyler Yin
  */
 @Controller
 @RequestMapping(value = "/map")
@@ -42,11 +43,11 @@ public class MapController {
         response.setCharacterEncoding("UTF-8");
 
         // 调用Api处理服务
-        String orgloc = MapService.getorgloc();
+        String orgLocation = MapService.getOrgLocation();
 
         // 响应消息
         PrintWriter out = response.getWriter();
-        out.print(orgloc);
+        out.print(orgLocation);
         out.close();
         out = null;
     }
@@ -65,7 +66,7 @@ public class MapController {
         response.setCharacterEncoding("UTF-8");
 
         // 调用Api处理服务
-        String orgloc = MapService.saveorgloc(request);
+        String orgloc = MapService.saveOrgLocation(request);
 
         // 响应消息
         PrintWriter out = response.getWriter();
