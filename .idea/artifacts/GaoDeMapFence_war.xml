@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="GaoDeMapFence:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="GaoDeMap.war">
+      <element id="artifact" artifact-name="GaoDeMapFence:war exploded" />
+    </root>
+  </artifact>
+</component>
