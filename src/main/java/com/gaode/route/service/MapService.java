@@ -20,7 +20,8 @@ public class MapService {
 
     public static String saveOrgLocation(HttpServletRequest request) {
         String org = request.getParameter("org");
-        String polyData = request.getParameter("polyData");
+
+        String polyData = request.getParameter("polygonData");
         String[] polyDataArray = polyData.split(";");
 
         MySqlUtils.deleteOrgLocation();
