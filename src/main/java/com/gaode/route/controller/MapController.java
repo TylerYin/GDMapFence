@@ -19,6 +19,16 @@ import java.io.PrintWriter;
 @Controller
 @RequestMapping(value = "/map")
 public class MapController {
+
+    /***
+     * 绘制多边形和圆
+     * @return
+     */
+    @RequestMapping(value = "/drawCircleAndPolygon")
+    public String drawCircleAndPolygon(HttpServletRequest request, HttpServletResponse response, Model model) {
+        return "map/drawCircleAndPolygon";
+    }
+
     /***
      * 多边形查询
      * @return

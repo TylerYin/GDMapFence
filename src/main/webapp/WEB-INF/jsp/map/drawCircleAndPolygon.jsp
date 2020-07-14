@@ -28,5 +28,5 @@
 </div>
 </body>
 <input type="hidden" value="${pageContext.request.contextPath}" id="contextPath">
-<script src="${pageContext.request.contextPath}/static/map3.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/static/drawCircleAndPolygon.js" type="text/javascript"></script>
 </html>
