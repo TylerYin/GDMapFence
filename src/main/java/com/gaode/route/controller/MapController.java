@@ -1,16 +1,16 @@
 package com.gaode.route.controller;
 
-import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.gaode.route.pojo.Shape;
 import com.gaode.route.service.MapService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.PrintWriter;
 
 /**
  * @Description MySQL Config file
@@ -48,18 +48,26 @@ public class MapController {
      */
     @RequestMapping(value = "/getPolygon", method = RequestMethod.POST)
     public void getPolygon(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        // 将请求、响应的编码均设置为UTF-8（防止中文乱码）
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        // 调用Api处理服务
-        String orgLocation = MapService.getOrgLocation();
-
-        // 响应消息
+        String shape = MapService.getPolygon();
         PrintWriter out = response.getWriter();
-        out.print(orgLocation);
+        out.print(shape);
         out.close();
-        out = null;
+    }
+
+    /***
+     * 圆形查询
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    @ResponseBody
+    @RequestMapping(value = "/getCircle", method = RequestMethod.POST)
+    public Shape getCircle(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        return MapService.getCircle();
     }
 
     /***
@@ -71,17 +79,22 @@ public class MapController {
      */
     @RequestMapping(value = "/savePolygon", method = RequestMethod.POST)
     public void savePolygon(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        // 将请求、响应的编码均设置为UTF-8（防止中文乱码）
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+        MapService.savePolygon(request);
+    }
 
-        // 调用Api处理服务
-        String orgLocation = MapService.saveOrgLocation(request);
-
-        // 响应消息
-        PrintWriter out = response.getWriter();
-        out.print(orgLocation);
-        out.close();
-        out = null;
+    /***
+     * 圆形保存
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "/saveCircle", method = RequestMethod.POST)
+    public void saveCircle(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        MapService.saveCircle(request);
     }
 }

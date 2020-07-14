@@ -20,11 +20,11 @@
         <input name="" type="button" class="button" value="结束绘制多边形" onClick="closePolygonEdit();" style="width: 110px; background-color: #0D9BF2;"/>
         <input name="" type="button" class="button" value="保存多边形围栏数据" onClick="savePolygonData();" style="width: 110px; background-color: #0D9BF2;"/>
     </div>
-    <%--<div>--%>
-        <%--<input name="" type="button" class="button" value="开始绘制圆形" onClick="editor.startEditCircle()" style="width: 110px; background-color: #AD9BF2;"/>--%>
-        <%--<input name="" type="button" class="button" value="结束绘制圆形" onClick="editor.closeEditCircle()" style="width: 110px; background-color: #AD9BF2;"/>--%>
-        <%--<input name="" type="button" class="button" value="保存圆形围栏数据" onClick="savePolygonData();" style="width: 110px; background-color: #AD9BF2;"/>--%>
-    <%--</div>--%>
+    <div>
+        <input name="" type="button" class="button" value="开始绘制圆形" onClick="startEditCircle()" style="width: 110px; background-color: #AD9BF2;"/>
+        <input name="" type="button" class="button" value="结束绘制圆形" onClick="closeEditCircle()" style="width: 110px; background-color: #AD9BF2;"/>
+        <input name="" type="button" class="button" value="保存圆形围栏数据" onClick="saveCircleData();" style="width: 110px; background-color: #AD9BF2;"/>
+    </div>
 </div>
 </body>
 <input type="hidden" value="${pageContext.request.contextPath}" id="contextPath">

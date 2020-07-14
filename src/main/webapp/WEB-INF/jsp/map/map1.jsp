@@ -42,9 +42,7 @@
     editor._line = (function () {
         var lineArr = [
             [116.368904, 39.913423],
-            [116.382122, 39.901176],
-            [116.387271, 39.912501],
-            [116.388258, 39.904600]
+            [116.382122, 39.901176]
         ];
         return new AMap.Polyline({
             map: map,
@@ -57,43 +55,43 @@
     })();
 
     //在地图上绘制多边形
-    editor._polygon = (function () {
-        var arr = [
-            [116.403322, 39.920255],
-            [116.410703, 39.897555],
-            [116.402292, 39.892353],
-            [116.389846, 39.891365]
-        ];
-        return new AMap.Polygon({
-            map: map,
-            path: arr,
-            strokeColor: "#0000ff",
-            strokeOpacity: 1,
-            strokeWeight: 3,
-            fillColor: "#f5deb3",
-            fillOpacity: 0.35
-        });
-    })();
+//    editor._polygon = (function () {
+//        var arr = [
+//            [116.403322, 39.920255],
+//            [116.410703, 39.897555],
+//            [116.402292, 39.892353],
+//            [116.389846, 39.891365]
+//        ];
+//        return new AMap.Polygon({
+//            map: map,
+//            path: arr,
+//            strokeColor: "#0000ff",
+//            strokeOpacity: 1,
+//            strokeWeight: 3,
+//            fillColor: "#f5deb3",
+//            fillOpacity: 0.35
+//        });
+//    })();
 
     //在地图上绘制圆
-    editor._circle = (function () {
-        var circle = new AMap.Circle({
-            center: [116.433322, 39.900255],// 圆心位置
-            radius: 1000, //半径
-            strokeColor: "#F33", //线颜色
-            strokeOpacity: 1, //线透明度
-            strokeWeight: 3, //线粗细度
-            fillColor: "#ee2200", //填充颜色
-            fillOpacity: 0.35//填充透明度
-        });
-        circle.setMap(map);
-        return circle;
-    })();
+//    editor._circle = (function () {
+//        var circle = new AMap.Circle({
+//            center: [116.433322, 39.900255],// 圆心位置
+//            radius: 1000, //半径
+//            strokeColor: "#F33", //线颜色
+//            strokeOpacity: 1, //线透明度
+//            strokeWeight: 3, //线粗细度
+//            fillColor: "#ee2200", //填充颜色
+//            fillOpacity: 0.35//填充透明度
+//        });
+//        circle.setMap(map);
+//        return circle;
+//    })();
 
     map.setFitView();
     editor._lineEditor = new AMap.PolyEditor(map, editor._line);
-    editor._polygonEditor = new AMap.PolyEditor(map, editor._polygon);
-    editor._circleEditor = new AMap.CircleEditor(map, editor._circle);
+//    editor._polygonEditor = new AMap.PolyEditor(map, editor._polygon);
+//    editor._circleEditor = new AMap.CircleEditor(map, editor._circle);
 
     editor.startEditLine = function () {
         editor._lineEditor.open();

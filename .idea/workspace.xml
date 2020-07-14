@@ -7,9 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a9b6610-7bfb-45d3-87c0-a577adcb89e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/map3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_8_3.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/dao/MapsqlUtil.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/dao/SqlUtil.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/pojo/OrgLoaction.class" afterPath="" />
@@ -22,14 +23,24 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/service/MapService.class" afterPath="$PROJECT_DIR$/target/classes/com/gaode/route/service/MapService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/controller/MapController.class" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/controller/MapController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/service/MapService.class" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/service/MapService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/GaoDeMapFence_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/GaoDeMapFence_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GaoDeMapFence.iml" afterPath="$PROJECT_DIR$/GaoDeMapFence.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map1.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map1.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map3.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map3.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/map3.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/map3.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map1.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map1.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map2.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map2.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map3.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map3.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/mvc-dispatcher-servlet.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/OrgLocation.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,21 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JdbcConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/JdbcConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MapController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="550">
+              <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -64,8 +65,49 @@
       <file leaf-file-name="MapService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="513">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySqlUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="66" column="92" lean-forward="false" selection-start-line="66" selection-start-column="92" selection-end-line="66" selection-end-column="92" />
+              <folding>
+                <element signature="docComment;method#getConn#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="method#getConn#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="docComment;method#releaseResources#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="method#releaseResources#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="docComment;method#getPeiZhiNameSub#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="method#getPeiZhiNameSub#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="method#getPolygon#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="method#getCircle#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="method#savePolygon#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="method#saveCircle#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="docComment;method#deleteShape#0;class#MySqlUtils#0" expanded="false" />
+                <element signature="method#deleteShape#0;class#MySqlUtils#0" expanded="false" />
+                <marker date="1593745830075" expanded="true" signature="1633:1709" ph="select infon... peizhiinfo" />
+                <marker date="1593745830075" expanded="true" signature="2599:2635" ph="SELECT * FRO... SHAPE" />
+                <marker date="1593745830075" expanded="true" signature="3469:3505" ph="SELECT * FRO... SHAPE" />
+                <marker date="1593745830075" expanded="true" signature="4199:4288" ph="INSERT INTO shape... " />
+                <marker date="1593745830075" expanded="true" signature="5138:5227" ph="INSERT INTO shape... " />
+                <marker date="1593745830075" expanded="true" signature="6023:6054" ph="DELETE FROM " />
+                <marker date="1593745830075" expanded="true" signature="6023:6055" ph="DELETE FROM " />
+                <marker date="1593745830075" expanded="true" signature="6023:6068" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shape.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-232">
+              <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,13 +118,9 @@
       <file leaf-file-name="map3.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map3.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="18" />
-              <folding>
-                <marker date="1592533056723" expanded="false" signature="1562:1602" ph="..." />
-                <marker date="1592533056723" expanded="false" signature="1723:1763" ph="..." />
-                <marker date="1592533056723" expanded="false" signature="1880:1920" ph="..." />
-              </folding>
+            <state relative-caret-position="775">
+              <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,12 +128,31 @@
       <file leaf-file-name="map3.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/static/map3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="526">
+              <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
               <folding>
+                <element signature="e#337#456#0" expanded="false" />
+                <element signature="n#!!block;n#loadPolygon#0" expanded="false" />
+                <element signature="n#!!block;n#createPolygon#0" expanded="false" />
+                <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
+                <element signature="n#!!block;n#clickPolygonOnMap#0" expanded="false" />
+                <element signature="n#!!block;n#savePolygonData#0" expanded="false" />
+                <element signature="n#!!block;n#clearPolygonMarks#0" expanded="false" />
+                <element signature="n#!!block;n#addPolygonMarker#0" expanded="false" />
+                <element signature="n#!!block;n#mapPolygonEditor#0" expanded="false" />
+                <element signature="n#!!block;n#closePolygonEdit#0" expanded="false" />
+                <element signature="n#!!block;n#endPolygon#0" expanded="false" />
                 <element signature="n#!!block;n#loadCircle#0" expanded="false" />
-                <element signature="e#3538#3574#0" expanded="false" />
-                <element signature="e#3614#3651#0" expanded="false" />
+                <element signature="n#!!block;n#createCircle#0" expanded="false" />
+                <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
+                <element signature="n#!!block;n#saveCircleData#0" expanded="false" />
+                <element signature="n#!!block;n#startEditCircle#0" expanded="false" />
+                <element signature="n#!!block;n#closeEditCircle#0" expanded="false" />
+                <element signature="n#!!block;n#endCircle#0" expanded="false" />
+                <element signature="n#!!block;n#clickCircleOnMap#0" expanded="false" />
+                <element signature="n#!!block;n#clearCircleMarks#0" expanded="false" />
+                <element signature="n#!!block;n#addCircleMarker#0" expanded="false" />
+                <element signature="n#!!block;n#json2arr#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -105,18 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pag</find>
-      <find>_circle</find>
-      <find>addMarker</find>
-      <find>createPolygon</find>
-      <find>map</find>
-      <find>_circleEditor</find>
-      <find>startEditCircle</find>
-      <find>CircleEditor</find>
-      <find>editor._circleEditor</find>
-      <find>mapPolygonEditor</find>
-      <find>polygonEnd</find>
-      <find>contextPath</find>
       <find>polyData</find>
       <find>mapOnClick</find>
       <find>openPolygonEditor</find>
@@ -124,17 +169,29 @@
       <find>AMap.event</find>
       <find>dataArray</find>
       <find>editor</find>
-      <find>polygonMark</find>
       <find>appendHideHtml</find>
       <find>polygonEditor</find>
       <find>polygonPoints</find>
-      <find>polygonData</find>
-      <find>endPolygon</find>
       <find>createPolygonEditor</find>
       <find>var</find>
       <find>polygon</find>
-      <find>polygonClickListener</find>
       <find>container</find>
+      <find>setFitView</find>
+      <find>circle</find>
+      <find>endPolygon</find>
+      <find>closeEditCircle</find>
+      <find>saveCircle</find>
+      <find>list</find>
+      <find>savec</find>
+      <find>polygonClickListener</find>
+      <find>polygonMark</find>
+      <find>clickCircleOnMap</find>
+      <find>mapPolygonEditor</find>
+      <find>startEditCircle</find>
+      <find>clickPolygonOnMap</find>
+      <find>polygonData</find>
+      <find>circlePoints</find>
+      <find>circleMark</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,17 +207,21 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/JdbcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySQLUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/OrgLocation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/service/test.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map2.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map1.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/test.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map1.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/OrgLocation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map3.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/util/JsonMapper.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/map3.js" />
       </list>
     </option>
@@ -170,6 +231,13 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="1920" />
@@ -191,7 +259,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,43 +267,17 @@
               <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
               <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -243,10 +285,11 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="map1&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/webapp/WEB-INF/jsp/map/map1.jsp" />
+    <property name="SearchEverywhereHistoryKey" value="sHA&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/java/com/gaode/route/pojo/Shape.java&#10;map1&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/webapp/WEB-INF/jsp/map/map1.jsp" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Develop\IntelliJWS\GaoDeMapFence\src\main\java\com\gaode\util" />
       <recent name="E:\Develop\IntelliJWS\GaoDeMapFence\src\main\webapp\static" />
       <recent name="E:\Develop\IntelliJWS\GaoDeMapFence\src\main\webapp\WEB-INF\jsp\map" />
     </key>
@@ -266,6 +309,7 @@
   <component name="RunManager" selected="Tomcat Server.GDMapFence">
     <configuration name="GDMapFence" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.42" ALTERNATIVE_JRE_ENABLED="false" show_console_on_std_out="true" show_console_on_std_err="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="COMMON_VM_ARGUMENTS" value="-mx2048m -XX:MaxPermSize=2048m -Drebel.spring_plugin=true -Drebel.hibernate_plugin=true" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
@@ -435,6 +479,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0a9b6610-7bfb-45d3-87c0-a577adcb89e4" name="Default" comment="" />
@@ -447,7 +494,17 @@
       <workItem from="1592449515419" duration="8851000" />
       <workItem from="1592528426830" duration="21183000" />
       <workItem from="1592560883265" duration="1238000" />
-      <workItem from="1592879841556" duration="3867000" />
+      <workItem from="1592879841556" duration="11518000" />
+      <workItem from="1592960621010" duration="4479000" />
+      <workItem from="1593307198167" duration="598000" />
+      <workItem from="1593334639146" duration="549000" />
+      <workItem from="1593653076938" duration="6627000" />
+      <workItem from="1593738168939" duration="12389000" />
+      <workItem from="1593996749904" duration="584000" />
+      <workItem from="1593997409270" duration="3308000" />
+      <workItem from="1594082832915" duration="1259000" />
+      <workItem from="1594099496499" duration="1668000" />
+      <workItem from="1594706112344" duration="1758000" />
     </task>
     <task id="LOCAL-00001" summary="refactor code.">
       <created>1592380432012</created>
@@ -456,11 +513,18 @@
       <option name="project" value="LOCAL" />
       <updated>1592380432012</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit the code related to customize draw polygon.">
+      <created>1592884444991</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592884444991</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54407000" />
+    <option name="totallyTimeSpent" value="95277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1036" extended-state="0" />
@@ -476,19 +540,20 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3249453" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5196937" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1631016" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15882353" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -496,7 +561,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -513,19 +577,19 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3249453" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5196937" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1631016" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15882353" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -540,23 +604,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor code." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor code." />
+    <MESSAGE value="commit the code related to customize draw polygon." />
+    <option name="LAST_COMMIT_MESSAGE" value="commit the code related to customize draw polygon." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/JdbcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2106">
@@ -569,9 +626,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -579,32 +634,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3780">
           <caret line="150" column="40" lean-forward="false" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="40" />
-          <folding>
-            <marker date="1592377949950" expanded="true" signature="1687:1763" ph="select infon... peizhiinfo" />
-            <marker date="1592377949950" expanded="true" signature="2625:2650" ph="select * fro... orgloaction" />
-            <marker date="1592377949950" expanded="true" signature="3603:3672" ph="insert into orgloaction... " />
-            <marker date="1592377949950" expanded="true" signature="4364:4387" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/map3_backup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/map3_backup.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map3.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <marker date="1592533056723" expanded="false" signature="1562:1602" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1723:1763" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1880:1920" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -613,9 +651,28 @@
         <state relative-caret-position="810">
           <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding>
+            <element signature="e#337#456#0" expanded="false" />
+            <element signature="n#!!block;n#loadPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#clickPolygonOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#savePolygonData#0" expanded="false" />
+            <element signature="n#!!block;n#clearPolygonMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addPolygonMarker#0" expanded="false" />
+            <element signature="n#!!block;n#mapPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#closePolygonEdit#0" expanded="false" />
+            <element signature="n#!!block;n#endPolygon#0" expanded="false" />
             <element signature="n#!!block;n#loadCircle#0" expanded="false" />
-            <element signature="e#3538#3574#0" expanded="false" />
-            <element signature="e#3614#3651#0" expanded="false" />
+            <element signature="n#!!block;n#createCircle#0" expanded="false" />
+            <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
+            <element signature="n#!!block;n#saveCircleData#0" expanded="false" />
+            <element signature="n#!!block;n#startEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#closeEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#endCircle#0" expanded="false" />
+            <element signature="n#!!block;n#clickCircleOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#clearCircleMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addCircleMarker#0" expanded="false" />
+            <element signature="n#!!block;n#json2arr#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -624,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,9 +688,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -650,32 +704,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3780">
           <caret line="150" column="40" lean-forward="false" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="40" />
-          <folding>
-            <marker date="1592377949950" expanded="true" signature="1687:1763" ph="select infon... peizhiinfo" />
-            <marker date="1592377949950" expanded="true" signature="2625:2650" ph="select * fro... orgloaction" />
-            <marker date="1592377949950" expanded="true" signature="3603:3672" ph="insert into orgloaction... " />
-            <marker date="1592377949950" expanded="true" signature="4364:4387" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/map3_backup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/map3_backup.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map3.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <marker date="1592533056723" expanded="false" signature="1562:1602" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1723:1763" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1880:1920" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -684,9 +721,28 @@
         <state relative-caret-position="810">
           <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding>
+            <element signature="e#337#456#0" expanded="false" />
+            <element signature="n#!!block;n#loadPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#clickPolygonOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#savePolygonData#0" expanded="false" />
+            <element signature="n#!!block;n#clearPolygonMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addPolygonMarker#0" expanded="false" />
+            <element signature="n#!!block;n#mapPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#closePolygonEdit#0" expanded="false" />
+            <element signature="n#!!block;n#endPolygon#0" expanded="false" />
             <element signature="n#!!block;n#loadCircle#0" expanded="false" />
-            <element signature="e#3538#3574#0" expanded="false" />
-            <element signature="e#3614#3651#0" expanded="false" />
+            <element signature="n#!!block;n#createCircle#0" expanded="false" />
+            <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
+            <element signature="n#!!block;n#saveCircleData#0" expanded="false" />
+            <element signature="n#!!block;n#startEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#closeEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#endCircle#0" expanded="false" />
+            <element signature="n#!!block;n#clickCircleOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#clearCircleMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addCircleMarker#0" expanded="false" />
+            <element signature="n#!!block;n#json2arr#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -695,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -711,12 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3780">
           <caret line="150" column="40" lean-forward="false" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="40" />
-          <folding>
-            <marker date="1592377949950" expanded="true" signature="1687:1763" ph="select infon... peizhiinfo" />
-            <marker date="1592377949950" expanded="true" signature="2625:2650" ph="select * fro... orgloaction" />
-            <marker date="1592377949950" expanded="true" signature="3603:3672" ph="insert into orgloaction... " />
-            <marker date="1592377949950" expanded="true" signature="4364:4387" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -724,11 +773,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <marker date="1592533056723" expanded="false" signature="1562:1602" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1723:1763" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1880:1920" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -737,9 +782,28 @@
         <state relative-caret-position="3618">
           <caret line="134" column="23" lean-forward="true" selection-start-line="134" selection-start-column="23" selection-end-line="134" selection-end-column="23" />
           <folding>
+            <element signature="e#337#456#0" expanded="false" />
+            <element signature="n#!!block;n#loadPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#clickPolygonOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#savePolygonData#0" expanded="false" />
+            <element signature="n#!!block;n#clearPolygonMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addPolygonMarker#0" expanded="false" />
+            <element signature="n#!!block;n#mapPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#closePolygonEdit#0" expanded="false" />
+            <element signature="n#!!block;n#endPolygon#0" expanded="false" />
             <element signature="n#!!block;n#loadCircle#0" expanded="false" />
-            <element signature="e#3538#3574#0" expanded="false" />
-            <element signature="e#3614#3651#0" expanded="false" />
+            <element signature="n#!!block;n#createCircle#0" expanded="false" />
+            <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
+            <element signature="n#!!block;n#saveCircleData#0" expanded="false" />
+            <element signature="n#!!block;n#startEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#closeEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#endCircle#0" expanded="false" />
+            <element signature="n#!!block;n#clickCircleOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#clearCircleMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addCircleMarker#0" expanded="false" />
+            <element signature="n#!!block;n#json2arr#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -748,9 +812,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -758,7 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,12 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3780">
           <caret line="150" column="40" lean-forward="false" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="40" />
-          <folding>
-            <marker date="1592377949950" expanded="true" signature="1687:1763" ph="select infon... peizhiinfo" />
-            <marker date="1592377949950" expanded="true" signature="2625:2650" ph="select * fro... orgloaction" />
-            <marker date="1592377949950" expanded="true" signature="3603:3672" ph="insert into orgloaction... " />
-            <marker date="1592377949950" expanded="true" signature="4364:4387" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -787,11 +842,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <marker date="1592533056723" expanded="false" signature="1562:1602" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1723:1763" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1880:1920" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -800,9 +851,28 @@
         <state relative-caret-position="135">
           <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding>
+            <element signature="e#337#456#0" expanded="false" />
+            <element signature="n#!!block;n#loadPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#clickPolygonOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#savePolygonData#0" expanded="false" />
+            <element signature="n#!!block;n#clearPolygonMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addPolygonMarker#0" expanded="false" />
+            <element signature="n#!!block;n#mapPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#closePolygonEdit#0" expanded="false" />
+            <element signature="n#!!block;n#endPolygon#0" expanded="false" />
             <element signature="n#!!block;n#loadCircle#0" expanded="false" />
-            <element signature="e#3538#3574#0" expanded="false" />
-            <element signature="e#3614#3651#0" expanded="false" />
+            <element signature="n#!!block;n#createCircle#0" expanded="false" />
+            <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
+            <element signature="n#!!block;n#saveCircleData#0" expanded="false" />
+            <element signature="n#!!block;n#startEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#closeEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#endCircle#0" expanded="false" />
+            <element signature="n#!!block;n#clickCircleOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#clearCircleMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addCircleMarker#0" expanded="false" />
+            <element signature="n#!!block;n#json2arr#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -811,7 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,9 +896,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="22" column="61" lean-forward="false" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -837,12 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3780">
           <caret line="150" column="40" lean-forward="false" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="40" />
-          <folding>
-            <marker date="1592377949950" expanded="true" signature="1687:1763" ph="select infon... peizhiinfo" />
-            <marker date="1592377949950" expanded="true" signature="2625:2650" ph="select * fro... orgloaction" />
-            <marker date="1592377949950" expanded="true" signature="3603:3672" ph="insert into orgloaction... " />
-            <marker date="1592377949950" expanded="true" signature="4364:4387" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -850,11 +911,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <marker date="1592533056723" expanded="false" signature="1562:1602" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1723:1763" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1880:1920" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -863,9 +920,28 @@
         <state relative-caret-position="405">
           <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
           <folding>
+            <element signature="e#337#456#0" expanded="false" />
+            <element signature="n#!!block;n#loadPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#clickPolygonOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#savePolygonData#0" expanded="false" />
+            <element signature="n#!!block;n#clearPolygonMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addPolygonMarker#0" expanded="false" />
+            <element signature="n#!!block;n#mapPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#closePolygonEdit#0" expanded="false" />
+            <element signature="n#!!block;n#endPolygon#0" expanded="false" />
             <element signature="n#!!block;n#loadCircle#0" expanded="false" />
-            <element signature="e#3538#3574#0" expanded="false" />
-            <element signature="e#3614#3651#0" expanded="false" />
+            <element signature="n#!!block;n#createCircle#0" expanded="false" />
+            <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
+            <element signature="n#!!block;n#saveCircleData#0" expanded="false" />
+            <element signature="n#!!block;n#startEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#closeEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#endCircle#0" expanded="false" />
+            <element signature="n#!!block;n#clickCircleOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#clearCircleMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addCircleMarker#0" expanded="false" />
+            <element signature="n#!!block;n#json2arr#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -874,22 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
           <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/OrgLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/JdbcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,14 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="61" lean-forward="true" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map2.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -930,19 +982,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map1.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="141" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,39 +1003,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/map3_backup.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/map3_backup.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/JdbcConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map1.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="101" column="6" lean-forward="false" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/util/JsonMapper.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="550">
+          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="150" column="40" lean-forward="false" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="40" />
+        <state relative-caret-position="400">
+          <caret line="66" column="92" lean-forward="false" selection-start-line="66" selection-start-column="92" selection-end-line="66" selection-end-column="92" />
           <folding>
-            <marker date="1592377949950" expanded="true" signature="1687:1763" ph="select infon... peizhiinfo" />
-            <marker date="1592377949950" expanded="true" signature="2625:2650" ph="select * fro... orgloaction" />
-            <marker date="1592377949950" expanded="true" signature="3603:3672" ph="insert into orgloaction... " />
-            <marker date="1592377949950" expanded="true" signature="4364:4387" ph="DELETE FROM " />
+            <element signature="docComment;method#getConn#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="method#getConn#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="docComment;method#releaseResources#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="method#releaseResources#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="docComment;method#getPeiZhiNameSub#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="method#getPeiZhiNameSub#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="method#getPolygon#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="method#getCircle#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="method#savePolygon#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="method#saveCircle#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="docComment;method#deleteShape#0;class#MySqlUtils#0" expanded="false" />
+            <element signature="method#deleteShape#0;class#MySqlUtils#0" expanded="false" />
+            <marker date="1593745830075" expanded="true" signature="1633:1709" ph="select infon... peizhiinfo" />
+            <marker date="1593745830075" expanded="true" signature="2599:2635" ph="SELECT * FRO... SHAPE" />
+            <marker date="1593745830075" expanded="true" signature="3469:3505" ph="SELECT * FRO... SHAPE" />
+            <marker date="1593745830075" expanded="true" signature="4199:4288" ph="INSERT INTO shape... " />
+            <marker date="1593745830075" expanded="true" signature="5138:5227" ph="INSERT INTO shape... " />
+            <marker date="1593745830075" expanded="true" signature="6023:6054" ph="DELETE FROM " />
+            <marker date="1593745830075" expanded="true" signature="6023:6055" ph="DELETE FROM " />
+            <marker date="1593745830075" expanded="true" signature="6023:6068" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="-232">
+          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1001,24 +1084,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map3.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <marker date="1592533056723" expanded="false" signature="1562:1602" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1723:1763" ph="..." />
-            <marker date="1592533056723" expanded="false" signature="1880:1920" ph="..." />
-          </folding>
+        <state relative-caret-position="775">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/map3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="526">
+          <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
           <folding>
+            <element signature="e#337#456#0" expanded="false" />
+            <element signature="n#!!block;n#loadPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#clickPolygonOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#savePolygonData#0" expanded="false" />
+            <element signature="n#!!block;n#clearPolygonMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addPolygonMarker#0" expanded="false" />
+            <element signature="n#!!block;n#mapPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#closePolygonEdit#0" expanded="false" />
+            <element signature="n#!!block;n#endPolygon#0" expanded="false" />
             <element signature="n#!!block;n#loadCircle#0" expanded="false" />
-            <element signature="e#3538#3574#0" expanded="false" />
-            <element signature="e#3614#3651#0" expanded="false" />
+            <element signature="n#!!block;n#createCircle#0" expanded="false" />
+            <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
+            <element signature="n#!!block;n#saveCircleData#0" expanded="false" />
+            <element signature="n#!!block;n#startEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#closeEditCircle#0" expanded="false" />
+            <element signature="n#!!block;n#endCircle#0" expanded="false" />
+            <element signature="n#!!block;n#clickCircleOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#clearCircleMarks#0" expanded="false" />
+            <element signature="n#!!block;n#addCircleMarker#0" expanded="false" />
+            <element signature="n#!!block;n#json2arr#0" expanded="false" />
           </folding>
         </state>
       </provider>

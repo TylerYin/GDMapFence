@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gaode.route.pojo.OrgLocation;
+import com.gaode.route.pojo.Shape;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -28,9 +28,7 @@ public class MySqlUtils {
         String password = JdbcConfig.password;
         Connection conn = null;
         try {
-            // 加载MySQL驱动
             Class.forName("com.mysql.jdbc.Driver");
-            // 获取数据库连接
             conn = DriverManager.getConnection(url, username, password);
         } catch (Exception e) {
             e.printStackTrace();
@@ -87,20 +85,18 @@ public class MySqlUtils {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            // 释放资源
             mysqlUtil.releaseResources(conn, ps, rs);
         }
         return infoName;
     }
 
-    public static String getOrgLocation() {
-        JSONArray jsonArray = new JSONArray();
-        List<String> list = new ArrayList<>();
-        String sql = "select * from orgloaction ";
-
+    public static String getPolygon() {
         ResultSet rs = null;
         Connection conn = null;
         PreparedStatement ps = null;
+        JSONArray jsonArray = new JSONArray();
+
+        String sql = "SELECT * FROM SHAPE WHERE TYPE = '2'";
         MySqlUtils mysqlUtil = new MySqlUtils();
         try {
             conn = mysqlUtil.getConn();
@@ -108,24 +104,47 @@ public class MySqlUtils {
 
             rs = ps.executeQuery();
             while (rs.next()) {
-                String ss = "[" + rs.getBigDecimal("lng") + "," + rs.getBigDecimal("lat") + "]";
-                list.add(ss);
-                JSONObject jb = new JSONObject();
-                jb.put("lng", rs.getBigDecimal("lng"));
-                jb.put("lat", rs.getBigDecimal("lat"));
-                jsonArray.add(jb);
+                JSONObject polygon = new JSONObject();
+                polygon.put("lng", rs.getBigDecimal("lng"));
+                polygon.put("lat", rs.getBigDecimal("lat"));
+                jsonArray.add(polygon);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            // 释放资源
             mysqlUtil.releaseResources(conn, ps, rs);
         }
         return jsonArray.toString();
     }
 
-    public static void saveOrgLocation(OrgLocation ol) {
-        String sql = "insert into orgloaction(orgcode, lng, lat, type) values(?, ?, ?, '1')";
+    public static Shape getCircle() {
+        ResultSet rs = null;
+        Connection conn = null;
+        PreparedStatement ps = null;
+
+        Shape shape = null;
+        String sql = "SELECT * FROM SHAPE WHERE TYPE = '1'";
+        MySqlUtils mysqlUtil = new MySqlUtils();
+        try {
+            conn = mysqlUtil.getConn();
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                shape = new Shape();
+                shape.setLng(rs.getBigDecimal("lng"));
+                shape.setLat(rs.getBigDecimal("lat"));
+                shape.setRadius(rs.getBigDecimal("radius"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            mysqlUtil.releaseResources(conn, ps, rs);
+        }
+        return shape;
+    }
+
+    public static void savePolygon(Shape shape) {
+        String sql = "INSERT INTO shape(company_id, dealer_id, lng, lat, radius, type) VALUES(?, ?, ?, ?, ?, ?)";
         MySqlUtils mySqlUtils = new MySqlUtils();
         Connection conn = null;
         PreparedStatement ps = null;
@@ -133,14 +152,39 @@ public class MySqlUtils {
         try {
             conn = mySqlUtils.getConn();
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, ol.getOrgCode());
-            ps.setBigDecimal(2, ol.getLng());
-            ps.setBigDecimal(3, ol.getLat());
+            ps.setString(1, null);
+            ps.setString(2, null);
+            ps.setBigDecimal(3, shape.getLng());
+            ps.setBigDecimal(4, shape.getLat());
+            ps.setBigDecimal(5, null);
+            ps.setString(6, "2");
             ps.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            // 释放资源
+            mySqlUtils.releaseResources(conn, ps, rs);
+        }
+    }
+
+    public static void saveCircle(Shape shape) {
+        ResultSet rs = null;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        String sql = "INSERT INTO shape(company_id, dealer_id, lng, lat, radius, type) VALUES(?, ?, ?, ?, ?, ?)";
+        MySqlUtils mySqlUtils = new MySqlUtils();
+        try {
+            conn = mySqlUtils.getConn();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, null);
+            ps.setString(2, null);
+            ps.setBigDecimal(3, shape.getLng());
+            ps.setBigDecimal(4, shape.getLat());
+            ps.setBigDecimal(5, shape.getRadius());
+            ps.setString(6, "1");
+            ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
             mySqlUtils.releaseResources(conn, ps, rs);
         }
     }
@@ -148,12 +192,12 @@ public class MySqlUtils {
     /**
      * 删除围栏数据
      */
-    public static void deleteOrgLocation() {
-        String sql = "DELETE FROM orgloaction";
-        MySqlUtils mySqlUtils = new MySqlUtils();
+    public static void deleteShape(String type) {
+        ResultSet rs = null;
         Connection conn = null;
         PreparedStatement ps = null;
-        ResultSet rs = null;
+        String sql = "DELETE FROM shape WHERE TYPE = '" + type + "'";
+        MySqlUtils mySqlUtils = new MySqlUtils();
         try {
             conn = mySqlUtils.getConn();
             ps = conn.prepareStatement(sql);
@@ -161,7 +205,6 @@ public class MySqlUtils {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            // 释放资源
             mySqlUtils.releaseResources(conn, ps, rs);
         }
     }
