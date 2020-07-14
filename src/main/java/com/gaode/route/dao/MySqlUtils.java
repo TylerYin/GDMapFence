@@ -96,7 +96,7 @@ public class MySqlUtils {
         PreparedStatement ps = null;
         JSONArray jsonArray = new JSONArray();
 
-        String sql = "SELECT * FROM SHAPE WHERE TYPE = '2'";
+        String sql = "SELECT * FROM SHAPE WHERE TYPE = '2' AND del_flag = '0'";
         MySqlUtils mysqlUtil = new MySqlUtils();
         try {
             conn = mysqlUtil.getConn();
@@ -123,7 +123,7 @@ public class MySqlUtils {
         PreparedStatement ps = null;
 
         Shape shape = null;
-        String sql = "SELECT * FROM SHAPE WHERE TYPE = '1'";
+        String sql = "SELECT * FROM SHAPE WHERE TYPE = '1' AND del_flag = '0'";
         MySqlUtils mysqlUtil = new MySqlUtils();
         try {
             conn = mysqlUtil.getConn();
@@ -152,8 +152,8 @@ public class MySqlUtils {
         try {
             conn = mySqlUtils.getConn();
             ps = conn.prepareStatement(sql);
-            ps.setString(1, null);
-            ps.setString(2, null);
+            ps.setString(1, "3d2772c219694f25ac1ed9240faa7b1c");
+            ps.setString(2, shape.getDealerId());
             ps.setBigDecimal(3, shape.getLng());
             ps.setBigDecimal(4, shape.getLat());
             ps.setBigDecimal(5, null);
@@ -175,8 +175,8 @@ public class MySqlUtils {
         try {
             conn = mySqlUtils.getConn();
             ps = conn.prepareStatement(sql);
-            ps.setString(1, null);
-            ps.setString(2, null);
+            ps.setString(1, "3d2772c219694f25ac1ed9240faa7b1c");
+            ps.setString(2, shape.getDealerId());
             ps.setBigDecimal(3, shape.getLng());
             ps.setBigDecimal(4, shape.getLat());
             ps.setBigDecimal(5, shape.getRadius());
@@ -196,7 +196,7 @@ public class MySqlUtils {
         ResultSet rs = null;
         Connection conn = null;
         PreparedStatement ps = null;
-        String sql = "DELETE FROM shape WHERE TYPE = '" + type + "'";
+        String sql = "DELETE FROM shape WHERE TYPE = '" + type + "' AND dealer_id = '10000'";
         MySqlUtils mySqlUtils = new MySqlUtils();
         try {
             conn = mySqlUtils.getConn();

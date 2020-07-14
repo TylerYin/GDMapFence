@@ -6,8 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a9b6610-7bfb-45d3-87c0-a577adcb89e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js" />
+    <list default="true" id="0a9b6610-7bfb-45d3-87c0-a577adcb89e4" name="Default" comment="refactor code.">
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/dao/MapsqlUtil.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/dao/SqlUtil.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/pojo/OrgLoaction.class" afterPath="" />
@@ -16,18 +15,21 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/dao/SqlUtil.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/pojo/OrgLoaction.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/service/test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map3.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/controller/MapController.class" afterPath="$PROJECT_DIR$/target/classes/com/gaode/route/controller/MapController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/service/MapService.class" afterPath="$PROJECT_DIR$/target/classes/com/gaode/route/service/MapService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/controller/MapController.class" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/controller/MapController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/service/MapService.class" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/service/MapService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/test.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map1.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map1.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map2.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map2.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map3.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map3.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map3.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,12 +41,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MapController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java">
+      <file leaf-file-name="MapService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="118">
+              <caret line="24" column="62" lean-forward="true" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+              <folding>
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySqlUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="94" column="31" lean-forward="true" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+              <folding>
+                <marker date="1594721345955" expanded="true" signature="1633:1709" ph="select infon... peizhiinfo" />
+                <marker date="1594721345955" expanded="true" signature="2599:2635" ph="SELECT * FRO... SHAPE" />
+                <marker date="1594721345955" expanded="true" signature="2599:2654" ph="SELECT * FRO... SHAPE" />
+                <marker date="1594721345955" expanded="true" signature="3488:3524" ph="SELECT * FRO... SHAPE" />
+                <marker date="1594721345955" expanded="true" signature="3488:3543" ph="SELECT * FRO... SHAPE" />
+                <marker date="1594721345955" expanded="true" signature="4237:4326" ph="INSERT INTO shape... " />
+                <marker date="1594721345955" expanded="true" signature="5221:5310" ph="INSERT INTO shape... " />
+                <marker date="1594721345955" expanded="true" signature="6151:6214" ph="DELETE FROM " />
+                <marker date="1594721345955" expanded="true" signature="6151:6220" ph="DELETE FROM " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,19 +77,34 @@
       <file leaf-file-name="drawCircleAndPolygon.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2025">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="443">
+              <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="drawCircleAndPolygon.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp">
+      <file leaf-file-name="test.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="500">
+              <caret line="20" column="94" lean-forward="false" selection-start-line="20" selection-start-column="79" selection-end-line="20" selection-end-column="94" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1750">
+              <caret line="70" column="74" lean-forward="false" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="74" />
+              <folding>
+                <element signature="n#!!block;n#clearPolygonMarks#0" expanded="false" />
+                <element signature="n#!!block;n#mapPolygonEditor#0" expanded="false" />
+                <element signature="n#!!block;n#closePolygonEdit#0" expanded="false" />
+                <element signature="n#!!block;n#json2arr#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,8 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mapOnClick</find>
-      <find>openPolygonEditor</find>
       <find>removeListener</find>
       <find>AMap.event</find>
       <find>dataArray</find>
@@ -103,6 +141,8 @@
       <find>circlePoints</find>
       <find>circleMark</find>
       <find>map3</find>
+      <find>test</find>
+      <find>dealerId</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,20 +161,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/service/test.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map2.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/test.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map1.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/OrgLocation.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map3.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/util/JsonMapper.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/map3.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/test.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" />
       </list>
     </option>
   </component>
@@ -179,51 +220,6 @@
               <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
               <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GaoDeMapFence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaoDeMapFence" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="map" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -242,7 +238,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="sHA&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/java/com/gaode/route/pojo/Shape.java&#10;map1&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/webapp/WEB-INF/jsp/map/map1.jsp" />
+    <property name="SearchEverywhereHistoryKey" value="draw&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/webapp/static/drawCircleAndPolygon.js&#10;Shape&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/java/com/gaode/route/pojo/Shape.java&#10;drawC&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp&#10;DRA&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/webapp/static/drawCircleAndPolygon.js&#10;te&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/webapp/WEB-INF/jsp/map/test.jsp&#10;sHA&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/java/com/gaode/route/pojo/Shape.java&#10;map1&#9;FILE&#9;file://E:/Develop/IntelliJWS/GaoDeMapFence/src/main/webapp/WEB-INF/jsp/map/map1.jsp" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -461,7 +457,7 @@
       <workItem from="1593997409270" duration="3308000" />
       <workItem from="1594082832915" duration="1259000" />
       <workItem from="1594099496499" duration="1668000" />
-      <workItem from="1594706112344" duration="2563000" />
+      <workItem from="1594706112344" duration="15815000" />
     </task>
     <task id="LOCAL-00001" summary="refactor code.">
       <created>1592380432012</created>
@@ -484,11 +480,18 @@
       <option name="project" value="LOCAL" />
       <updated>1594707946681</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor code.">
+      <created>1594708718714</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594708718714</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96082000" />
+    <option name="totallyTimeSpent" value="109334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1036" extended-state="0" />
@@ -496,7 +499,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55748373" sideWeight="0.5021299" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -504,7 +507,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5196937" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -515,7 +518,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15882353" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15882353" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -532,7 +535,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55748373" sideWeight="0.5021299" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -541,7 +544,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5196937" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -549,7 +552,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -577,14 +580,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor code." />
     <MESSAGE value="commit the code related to customize draw polygon." />
     <MESSAGE value="finish the code related to customize draw circle and polygon." />
-    <option name="LAST_COMMIT_MESSAGE" value="finish the code related to customize draw circle and polygon." />
+    <MESSAGE value="refactor code." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="30" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -593,7 +596,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -655,7 +661,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -779,7 +788,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-          <folding />
+          <folding>
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -863,7 +875,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="22" column="61" lean-forward="false" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
-          <folding />
+          <folding>
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -921,13 +936,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/service/test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -957,32 +965,6 @@
         <state relative-caret-position="329">
           <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="66" column="92" lean-forward="false" selection-start-line="66" selection-start-column="92" selection-end-line="66" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1049,14 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/map1.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3457">
@@ -1067,25 +1041,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="315">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2025">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="225">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        <state relative-caret-position="668">
+          <caret line="107" column="25" lean-forward="true" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="24" column="62" lean-forward="true" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+          <folding>
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="94" lean-forward="false" selection-start-line="20" selection-start-column="79" selection-end-line="20" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1750">
+          <caret line="70" column="74" lean-forward="false" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="74" />
+          <folding>
+            <element signature="n#!!block;n#clearPolygonMarks#0" expanded="false" />
+            <element signature="n#!!block;n#mapPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#closePolygonEdit#0" expanded="false" />
+            <element signature="n#!!block;n#json2arr#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="94" column="31" lean-forward="true" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+          <folding>
+            <marker date="1594721345955" expanded="true" signature="1633:1709" ph="select infon... peizhiinfo" />
+            <marker date="1594721345955" expanded="true" signature="2599:2635" ph="SELECT * FRO... SHAPE" />
+            <marker date="1594721345955" expanded="true" signature="2599:2654" ph="SELECT * FRO... SHAPE" />
+            <marker date="1594721345955" expanded="true" signature="3488:3524" ph="SELECT * FRO... SHAPE" />
+            <marker date="1594721345955" expanded="true" signature="3488:3543" ph="SELECT * FRO... SHAPE" />
+            <marker date="1594721345955" expanded="true" signature="4237:4326" ph="INSERT INTO shape... " />
+            <marker date="1594721345955" expanded="true" signature="5221:5310" ph="INSERT INTO shape... " />
+            <marker date="1594721345955" expanded="true" signature="6151:6214" ph="DELETE FROM " />
+            <marker date="1594721345955" expanded="true" signature="6151:6220" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>

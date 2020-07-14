@@ -24,8 +24,8 @@ var map = new AMap.Map("container", {
 $(document).ready(function () {
     // 两个绘图不能同时打开，监听器有冲突
 
-    //loadPolygon();
-    loadCircle();
+    loadPolygon();
+    //loadCircle();
     map.setFitView();
 });
 
@@ -83,7 +83,7 @@ function clickPolygonOnMap(e) {
 
 //保存多边形数据
 function savePolygonData() {
-    var param = {"polygonData": polygonData.join(';')};
+    var param = {"polygonData": polygonData.join(';'), "dealerId": "10000"};
     $.ajax({
         url: $("#contextPath").val() + "/map/savePolygon",
         type: 'post',
@@ -166,7 +166,7 @@ function createCircleEditor() {
 
 //保存圆形数据
 function saveCircleData() {
-    var param = {"circleRadius": circleRadius, "circleCenterLng": circleCenterLng, "circleCenterLat": circleCenterLat};
+    var param = {"circleRadius": circleRadius, "circleCenterLng": circleCenterLng, "circleCenterLat": circleCenterLat, "dealerId": "10000"};
     $.ajax({
         url: $("#contextPath").val() + "/map/saveCircle",
         type: 'post',
