@@ -8,9 +8,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.gaode.route.pojo.Point;
 import com.gaode.route.pojo.Shape;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import com.gaode.route.pojo.ShapeTypeEnum;
 
 /**
  * @Description MySQL数据库操作类
@@ -59,82 +59,35 @@ public class MySqlUtils {
         }
     }
 
-    /**
-     * 根据id查询对应信息
-     *
-     * @return
-     */
-    public static String getPeiZhiNameSub(String byteNum, String byteSort, String byteInfo) {
-        String infoName = "";
-        String sql = "select infoname from peizhiinfo where bytenum=? and bytesort=? and infonum=?";
-
-        MySqlUtils mysqlUtil = new MySqlUtils();
-        Connection conn = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        try {
-            conn = mysqlUtil.getConn();
-            ps = conn.prepareStatement(sql);
-            ps.setString(1, byteNum);
-            ps.setString(2, byteSort);
-            ps.setString(3, byteInfo);
-            rs = ps.executeQuery();
-            if (rs.next()) {
-                infoName = rs.getString("infoName");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            mysqlUtil.releaseResources(conn, ps, rs);
-        }
-        return infoName;
-    }
-
-    public static String getPolygon() {
+    public static Shape getShape(String dealerId) {
         ResultSet rs = null;
         Connection conn = null;
         PreparedStatement ps = null;
-        JSONArray jsonArray = new JSONArray();
+        Shape shape = new Shape();
+        List<Point> points = new ArrayList<>();
 
-        String sql = "SELECT * FROM SHAPE WHERE TYPE = '2' AND del_flag = '0'";
-        MySqlUtils mysqlUtil = new MySqlUtils();
-        try {
-            conn = mysqlUtil.getConn();
-            ps = conn.prepareStatement(sql);
-
-            rs = ps.executeQuery();
-            while (rs.next()) {
-                JSONObject polygon = new JSONObject();
-                polygon.put("lng", rs.getBigDecimal("lng"));
-                polygon.put("lat", rs.getBigDecimal("lat"));
-                jsonArray.add(polygon);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            mysqlUtil.releaseResources(conn, ps, rs);
-        }
-        return jsonArray.toString();
-    }
-
-    public static Shape getCircle() {
-        ResultSet rs = null;
-        Connection conn = null;
-        PreparedStatement ps = null;
-
-        Shape shape = null;
-        String sql = "SELECT * FROM SHAPE WHERE TYPE = '1' AND del_flag = '0'";
+        String sql = "SELECT * FROM shape WHERE del_flag = '0' AND dealer_id = '" + dealerId + "'";
         MySqlUtils mysqlUtil = new MySqlUtils();
         try {
             conn = mysqlUtil.getConn();
             ps = conn.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                shape = new Shape();
-                shape.setLng(rs.getBigDecimal("lng"));
-                shape.setLat(rs.getBigDecimal("lat"));
-                shape.setRadius(rs.getBigDecimal("radius"));
+                int type = rs.getInt("type");
+                if (shape.getType() == 0) {
+                    shape.setType(type);
+                }
+
+                if (ShapeTypeEnum.CIRCLE.getType() == type) {
+                    shape.setRadius(rs.getBigDecimal("radius"));
+                }
+
+                Point point = new Point();
+                point.setLng(rs.getBigDecimal("lng"));
+                point.setLat(rs.getBigDecimal("lat"));
+                points.add(point);
             }
+            shape.setPoints(points);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -152,13 +105,15 @@ public class MySqlUtils {
         try {
             conn = mySqlUtils.getConn();
             ps = conn.prepareStatement(sql);
-            ps.setString(1, "3d2772c219694f25ac1ed9240faa7b1c");
-            ps.setString(2, shape.getDealerId());
-            ps.setBigDecimal(3, shape.getLng());
-            ps.setBigDecimal(4, shape.getLat());
-            ps.setBigDecimal(5, null);
-            ps.setString(6, "2");
-            ps.executeUpdate();
+            for (Point point : shape.getPoints()) {
+                ps.setString(1, "3d2772c219694f25ac1ed9240faa7b1c");
+                ps.setString(2, shape.getDealerId());
+                ps.setBigDecimal(3, point.getLng());
+                ps.setBigDecimal(4, point.getLat());
+                ps.setBigDecimal(5, null);
+                ps.setString(6, "2");
+                ps.executeUpdate();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -177,8 +132,12 @@ public class MySqlUtils {
             ps = conn.prepareStatement(sql);
             ps.setString(1, "3d2772c219694f25ac1ed9240faa7b1c");
             ps.setString(2, shape.getDealerId());
-            ps.setBigDecimal(3, shape.getLng());
-            ps.setBigDecimal(4, shape.getLat());
+
+            for (Point point : shape.getPoints()) {
+                ps.setBigDecimal(3, point.getLng());
+                ps.setBigDecimal(4, point.getLat());
+            }
+
             ps.setBigDecimal(5, shape.getRadius());
             ps.setString(6, "1");
             ps.executeUpdate();
@@ -192,11 +151,18 @@ public class MySqlUtils {
     /**
      * 删除围栏数据
      */
-    public static void deleteShape(String type) {
+    public static void deleteShape(String type, String dealerId) {
         ResultSet rs = null;
         Connection conn = null;
         PreparedStatement ps = null;
-        String sql = "DELETE FROM shape WHERE TYPE = '" + type + "' AND dealer_id = '10000'";
+
+        String sql;
+        if (null != type) {
+            sql = "DELETE FROM shape WHERE type = '" + type + "' AND dealer_id = '" + dealerId + "'";
+        } else {
+            sql = "DELETE FROM shape WHERE dealer_id = '" + dealerId + "'";
+        }
+
         MySqlUtils mySqlUtils = new MySqlUtils();
         try {
             conn = mySqlUtils.getConn();

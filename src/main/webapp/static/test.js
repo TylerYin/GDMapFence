@@ -1,111 +1,166 @@
+var editor = {};
+var polygonClickListener;
+
+var polygonArray = [];
+
+var polygonMark = [];
+var polygonData = [];
+var polygonPoints = [];
+var polygonPointNum = 0;
+
+//定义地图画图工具  中心点等
 var map = new AMap.Map("container", {
     resizeEnable: true,
     zoom: 13
 });
 
-var dataArray;
-var beginMark;
-var beginPoint;
-var beginNum = 0;
-var clickListener;
+$(document).ready(function () {
+    loadPolygon();
+    map.setFitView();
+});
 
-//多边形 全局变量
-var polygonEditor;
-var polyData = [];
+function loadPolygon() {
+    $.ajax({
+        url: $("#contextPath").val() + "/map/getPolygon?dealerId=10000",
+        type: 'post',
+        dataType: 'json',
+        async: false,
+        success: function (data) {
+            createPolygon(0, json2arr(JSON.stringify(data)), "red");
+        }
+    });
 
-getData();
-
-//给地图增加单击事件及初始化数据
-function init() {
-    beginPoint = [];
-    beginMark = [];
-    beginNum = 0;
-    polygonEditor = '';
-    clickListener = AMap.event.addListener(map, "click", mapOnClick);
-    var arr = json2arr(dataArray);
-    createPolygon(arr);
+    $.ajax({
+        url: $("#contextPath").val() + "/map/getPolygon?dealerId=10001",
+        type: 'post',
+        dataType: 'json',
+        async: false,
+        success: function (data) {
+            if (data != null && data.length > 0) {
+                createPolygon(1, json2arr(JSON.stringify(data)), "blue");
+                createPolygonEditor();
+            }
+            polygonClickListener = AMap.event.addListener(polygonArray[0], "click", clickPolygonOnMap);
+        }
+    });
 }
 
-//后台有数据的话初始化数据
-function init2() {
-    beginPoint = [];
-    beginMark = [];
-    beginNum = 0;
-    polygonEditor = '';
-
-    // clickListener = AMap.event.addListener(map, "click", mapOnClick);
-    var arr = json2arr(dataArray);
-    var polygon = createPolygon(arr);
-    polygonEditor = createEditor(polygon);
-}
-
-//点击事件 点的监听保存
-function mapOnClick(e) {
-    beginMark.push(addMarker(e.lnglat));
-    beginPoint.push(e.lnglat);
-    beginNum++;
-    if (beginNum == 3) {
-        AMap.event.removeListener(clickListener);
-        var polygon = createPolygon(beginPoint);
-        polygonEditor = createEditor(polygon);
-        clearMarks();
-    }
-}
-
-//多边形实例
-function createPolygon(arr) {
-    var polygon = new AMap.Polygon({
+//创建多边形
+function createPolygon(shapeIndex, path, strokeColor) {
+    polygonArray[shapeIndex] = new AMap.Polygon({
         map: map,
-        path: arr,
-        strokeColor: "#0000ff",
+        path: path,
+        strokeColor: strokeColor,
         strokeOpacity: 1,
         strokeWeight: 3,
         fillColor: "#f5deb3",
         fillOpacity: 0.35
     });
-    return polygon;
 }
 
-//多边形实例编辑、关闭 事件等
-function createEditor(polygon) {
-    var polygonEditor = new AMap.PolyEditor(map, polygon);
-    polygonEditor.open();
-    AMap.event.addListener(polygonEditor, 'end', polygonEnd);
-    return polygonEditor;
+//打开多边形实例编辑
+function createPolygonEditor() {
+    editor._polygonEditor = new AMap.PolyEditor(map, polygonArray[1]);
+    AMap.event.addListener(editor._polygonEditor, 'end', endPolygon);
+    AMap.event.addListener(editor._polygonEditor, 'adjust', adjustPolygon);
 }
 
-//编辑方法
-function mapEditor() {
-    polygonEditor.open();
+//地图上点击事件
+function clickPolygonOnMap(e) {
+    polygonPointNum++;
+    polygonPoints.push(e.lnglat);
+    polygonMark.push(addPolygonMarker(e.lnglat));
+    if (polygonPointNum == 3) {
+        AMap.event.removeListener(polygonClickListener);
+        createPolygon(1, polygonPoints, "blue");
+        createPolygonEditor();
+        editor._polygonEditor.open();
+        clearPolygonMarks();
+    }
 }
 
-//关闭方法  关闭时会调用end事件
-function closeEditPolygon() {
-    polygonEditor.close();
+//保存多边形数据
+function savePolygonData() {
+    if (polygonArray.length != 2) {
+        alert("请完成电子围栏绘制");
+    } else {
+        if (compute()) {
+            var param = {"polygonData": polygonData.join(';'), "dealerId": "10001"};
+            $.ajax({
+                url: $("#contextPath").val() + "/map/savePolygon",
+                type: 'post',
+                dataType: 'json',
+                data: param,
+                async: true,
+                success: function (data) {
+                    alert("多边形数据保存成功！");
+                }
+            });
+        } else {
+            alert("绘制的电子围栏越界了，请调整");
+        }
+    }
 }
 
-//end的事件  返回 多边形坐标位置
-function polygonEnd(res) {
-    polyData.push(res.target);
+function clearPolygonData() {
+    editor._polygonEditor.close();
+    map.remove(polygonArray[1]);
+    polygonClickListener = AMap.event.addListener(polygonArray[0], "click", clickPolygonOnMap);
 }
 
-//console 打印
-function appendHideHtml(index, arr) {
-    var stringify = JSON.stringify(arr);
-    var html = '<input type="hidden" id="index' + index + '" name="paths[]" value="' + stringify + '">';
-    $('body').append(html);
-    console.log(html);
+// 清除多边形标记
+function clearPolygonMarks() {
+    map.remove(polygonMark);
 }
 
-// 清除标记
-function clearMarks() {
-    map.remove(beginMark);
+// 实例化多边形点标记
+function addPolygonMarker(lnglat) {
+    var marker = new AMap.Marker({
+        icon: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png",
+        position: lnglat
+    });
+    marker.on('dragging',compute());
+    marker.setMap(map);
+    return marker;
 }
 
-//json to  arr
+//打开编辑多边形
+function mapPolygonEditor() {
+    var drawShape = $("#drawShape").val();
+    if ("0" == drawShape) {
+        alert("请选择要绘制的图形");
+    } else {
+        if ("1" == drawShape) {
+
+        } else {
+
+        }
+    }
+    editor._polygonEditor.open();
+}
+
+//关闭多边形方法编辑,关闭时会调用end事件
+function closePolygonEdit() {
+    editor._polygonEditor.close();
+}
+
+//结束多边形的编辑，返回多边形坐标位置
+function endPolygon(res) {
+    polygonData.push(res.target);
+}
+
+//结束多边形的编辑，返回多边形坐标位置
+function adjustPolygon(res) {
+    var validShape = compute();
+    if (!validShape) {
+        alert("绘制的电子围栏越界了，请调整");
+    }
+}
+
+// ====================================================================工具====================================================================
 function json2arr(json) {
-    var arr = JSON.parse(json);
     var res = [];
+    var arr = JSON.parse(json);
     for (var i = 0; i < arr.length; i++) {
         var line = [];
         line.push(arr[i].lng);
@@ -115,48 +170,11 @@ function json2arr(json) {
     return res;
 }
 
-// 实例化点标记
-function addMarker(lnglat) {
-    var marker = new AMap.Marker({
-        icon: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png",
-        position: lnglat
-    });
-    marker.setMap(map);
-    return marker;
-}
-
-/**============================后台数据交互ajax */
-//保存
-function saveData() {
-    var param = {"org": 1, "polyData": polyData.join(';')};
-    $.ajax({
-        url: $("#contextPath").val() + "/map/savePolygon",
-        type: 'post',
-        dataType: 'json',
-        data: param,
-        async: true,
-        success: function (data) {
-            alert("数据保存成功！");
-        }
-    });
-}
-
-//查询
-function getData() {
-    var param = {"pagenum": 1, "infos": 2};
-    $.ajax({
-        url: $("#contextPath").val() + "/map/getPolygon",
-        type: 'post',
-        dataType: 'json',
-        data: param,
-        async: true,
-        success: function (data) {
-            if (data != null && data.length > 0) {
-                dataArray = JSON.stringify(data);
-                init2();
-            } else {
-                init();
-            }
-        }
-    });
+function compute() {
+    if (polygonArray.length == 2) {
+        var polygon1_path = polygonArray[0].getPath();
+        var polygon2_path = polygonArray[1].getPath();
+        return AMap.GeometryUtil.isRingInRing(polygon2_path, polygon1_path);
+    }
+    return false;
 }

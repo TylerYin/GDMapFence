@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!doctype html>
 <html>
 <head>
@@ -16,14 +16,15 @@
 <div id="container"></div>
 <div class="button-group">
     <div>
-        <input name="" type="button" class="button" value="开始绘制多边形" onClick="mapPolygonEditor();" style="width: 110px; background-color: #0D9BF2;"/>
-        <input name="" type="button" class="button" value="结束绘制多边形" onClick="closePolygonEdit();" style="width: 110px; background-color: #0D9BF2;"/>
-        <input name="" type="button" class="button" value="保存多边形围栏数据" onClick="savePolygonData();" style="width: 110px; background-color: #0D9BF2;"/>
-    </div>
-    <div>
-        <input name="" type="button" class="button" value="开始绘制圆形" onClick="startEditCircle()" style="width: 110px; background-color: #AD9BF2;"/>
-        <input name="" type="button" class="button" value="结束绘制圆形" onClick="closeEditCircle()" style="width: 110px; background-color: #AD9BF2;"/>
-        <input name="" type="button" class="button" value="保存圆形围栏数据" onClick="saveCircleData();" style="width: 110px; background-color: #AD9BF2;"/>
+        <select name="drawShape" id="drawShape" style="width: 120px; height: 29px; background-color: #0D9BF2;"/>
+            <option style="height: 25px;" value="0">选择绘制图形</option>
+            <option style="height: 25px;" value="1">绘制圆形</option>
+            <option style="height: 25px;" value="2">绘制多边形</option>
+        </select>
+        <input name="startDraw" id="startDraw" type="button" class="button" value="开始绘制" onClick="openEditor();" style="width: 110px; background-color: #0D9BF2;"/>
+        <input name="endDraw" id="endDraw" type="button" class="button" value="结束绘制" onClick="closeEditor();" style="width: 110px; background-color: #0D9BF2;"/>
+        <input name="save" id="save" type="button" class="button" value="保存" onClick="saveShape();" style="width: 110px; background-color: #0D9BF2;"/>
+        <input name="clear" id="clear" type="button" class="button" value="清除" onClick="clearShape();" style="width: 80px; background-color: #0D9BF2;"/>
     </div>
 </div>
 </body>
