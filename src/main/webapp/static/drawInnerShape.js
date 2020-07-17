@@ -125,6 +125,8 @@ function saveShape() {
                     alert("电子围栏保存成功！");
                 }
             });
+
+            window.close();
         } else {
             alert("电子围栏越界，请调整");
         }

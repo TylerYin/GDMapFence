@@ -70,4 +70,9 @@ public class MapController {
         response.setCharacterEncoding("UTF-8");
         mapService.saveShape(request);
     }
+
+    @RequestMapping(value = "/drawShape")
+    public String openNewPage(HttpServletRequest request, HttpServletResponse response, Model model) {
+        return "map/drawShape";
+    }
 }

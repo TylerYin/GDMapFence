@@ -221,6 +221,8 @@ function saveShape() {
     $("#save").css("color", "gray");
     $("#clear").attr("disabled", true);
     $("#clear").css("color", "gray");
+
+    window.close();
 }
 
 function clearShape() {

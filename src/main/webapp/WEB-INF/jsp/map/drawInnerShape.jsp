@@ -29,5 +29,5 @@
 </div>
 </body>
 <input type="hidden" value="${pageContext.request.contextPath}" id="contextPath">
-<script src="${pageContext.request.contextPath}/static/drawInnerShpae.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/static/drawInnerShape.js" type="text/javascript"></script>
 </html>
