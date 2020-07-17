@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a9b6610-7bfb-45d3-87c0-a577adcb89e4" name="Default" comment="refactor code.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Point.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/ShapeTypeEnum.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawInnerShape.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/dao/MapsqlUtil.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/dao/SqlUtil.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/gaode/route/pojo/OrgLoaction.class" afterPath="" />
@@ -24,17 +24,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/service/MapService.class" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/classes/com/gaode/route/service/MapService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/test.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map1.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map1.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map2.jsp" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/jsp/map/map2.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/gaoDeMap/WEB-INF/mvc-dispatcher-servlet.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/static/test.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/drawInnerShpae.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +44,8 @@
       <file leaf-file-name="MapController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="70" column="24" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="70" column="22" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
               <folding>
                 <element signature="docComment;class#MapController#0" expanded="false" />
                 <element signature="e#474#485#0" expanded="false" />
@@ -59,7 +54,7 @@
                 <element signature="docComment;method#test#0;class#MapController#0" expanded="false" />
                 <element signature="method#test#0;class#MapController#0" expanded="false" />
                 <element signature="docComment;method#getShape#0;class#MapController#0" expanded="false" />
-                <element signature="e#1247#1260#0" expanded="false" />
+                <element signature="e#1267#1280#0" expanded="false" />
                 <element signature="method#getShape#0;class#MapController#0" expanded="false" />
                 <element signature="docComment;method#saveShape#0;class#MapController#0" expanded="false" />
               </folding>
@@ -70,8 +65,8 @@
       <file leaf-file-name="MapService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="47" />
+            <state relative-caret-position="725">
+              <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
               <folding>
                 <element signature="docComment;class#MapService#0" expanded="false" />
               </folding>
@@ -82,8 +77,8 @@
       <file leaf-file-name="MySqlUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="163" column="9" lean-forward="true" selection-start-line="158" selection-start-column="8" selection-end-line="163" selection-end-column="9" />
+            <state relative-caret-position="475">
+              <caret line="153" column="23" lean-forward="false" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
               <folding>
                 <element signature="docComment;class#MySqlUtils#0" expanded="false" />
                 <element signature="docComment;method#getConn#0;class#MySqlUtils#0" expanded="false" />
@@ -111,8 +106,8 @@
       <file leaf-file-name="drawCircleAndPolygon.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="25" column="90" lean-forward="false" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
+            <state relative-caret-position="650">
+              <caret line="26" column="94" lean-forward="false" selection-start-line="26" selection-start-column="94" selection-end-line="26" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -121,12 +116,11 @@
       <file leaf-file-name="drawCircleAndPolygon.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="51" column="3" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
+            <state relative-caret-position="643">
+              <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
               <folding>
                 <element signature="e#322#362#0" expanded="false" />
                 <element signature="e#396#1423#0" expanded="false" />
-                <element signature="e#409#1397#0" expanded="false" />
                 <element signature="n#!!block;n#openEditor#0" expanded="false" />
                 <element signature="n#!!block;n#closeEditor#0" expanded="false" />
                 <element signature="n#!!block;n#endEditor#0" expanded="false" />
@@ -138,33 +132,50 @@
                 <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
                 <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
                 <element signature="n#!!block;n#saveShape#0" expanded="false" />
-                <element signature="e#5394#5644#0" expanded="false" />
-                <element signature="e#5650#5766#0" expanded="false" />
-                <element signature="e#5779#6010#0" expanded="false" />
                 <element signature="n#!!block;n#clearShape#0" expanded="false" />
+                <element signature="n#!!block;n#clearMap#0" expanded="false" />
                 <element signature="n#!!block;n#json2arr#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp">
+      <file leaf-file-name="drawInnerShape.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawInnerShape.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="112" lean-forward="false" selection-start-line="18" selection-start-column="112" selection-end-line="18" selection-end-column="112" />
+            <state relative-caret-position="318">
+              <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/test.js">
+      <file leaf-file-name="drawInnerShpae.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/drawInnerShpae.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="508">
+              <caret line="206" column="13" lean-forward="true" selection-start-line="204" selection-start-column="12" selection-end-line="206" selection-end-column="13" />
               <folding>
+                <element signature="e#296#336#0" expanded="false" />
+                <element signature="e#370#412#0" expanded="false" />
+                <element signature="n#!!block;n#loadShape#0" expanded="false" />
+                <element signature="e#450#992#0" expanded="false" />
+                <element signature="e#1007#1939#0" expanded="false" />
+                <element signature="n#!!block;n#clickOnMap#0" expanded="false" />
+                <element signature="n#!!block;n#saveShape#0" expanded="false" />
+                <element signature="n#!!block;n#clearShape#0" expanded="false" />
+                <element signature="n#!!block;n#createPolygon#0" expanded="false" />
+                <element signature="n#!!block;n#createCircle#0" expanded="false" />
+                <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
+                <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
+                <element signature="n#!!block;n#endEditor#0" expanded="false" />
+                <element signature="n#!!block;n#closeEditor#0" expanded="false" />
+                <element signature="n#!!block;n#clearMarker#0" expanded="false" />
+                <element signature="n#!!block;n#addMarker#0" expanded="false" />
+                <element signature="n#!!block;n#adjustShape#0" expanded="false" />
                 <element signature="n#!!block;n#json2arr#0" expanded="false" />
+                <element signature="n#!!block;n#isRingInRing#0" expanded="false" />
+                <element signature="n#!!block;n#convertCircleToPolygon#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -182,36 +193,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>circle</find>
-      <find>closeEditCircle</find>
-      <find>saveCircle</find>
-      <find>list</find>
-      <find>savec</find>
-      <find>polygonClickListener</find>
-      <find>clickCircleOnMap</find>
-      <find>mapPolygonEditor</find>
-      <find>startEditCircle</find>
-      <find>circlePoints</find>
-      <find>map3</find>
-      <find>test</find>
-      <find>dealerId</find>
-      <find>editor._polygonEditor</find>
-      <find>clearPolygonMarks</find>
-      <find>endPolygon</find>
-      <find>circleMark</find>
-      <find>clearMarker</find>
-      <find>polygonMark</find>
-      <find>markers</find>
-      <find>polygonData</find>
-      <find>circleCenterLng</find>
-      <find>clickPolygonOnMap</find>
-      <find>saveData</find>
-      <find>clear</find>
-      <find>drawShape</find>
-      <find>PolyEditor</find>
-      <find>editShape</find>
       <find>isEditShape</find>
       <find>isClearShape</find>
+      <find>mapPolygonEditor</find>
+      <find>circlee</find>
+      <find>polygonArray</find>
+      <find>polygonA</find>
+      <find>addMa</find>
+      <find>addmark</find>
+      <find>closePolygonEdit</find>
+      <find>endPolygon</find>
+      <find>createCircle</find>
+      <find>clearPolygonData</find>
+      <find>createPolygon</find>
+      <find>polygonClickListener</find>
+      <find>editor</find>
+      <find>saveS</find>
+      <find>clickOnMap</find>
+      <find>_polygonEditor</find>
+      <find>editor._circle</find>
+      <find>create</find>
+      <find>shapeArray</find>
+      <find>addMarker</find>
+      <find>draw</find>
+      <find>drawShapeType</find>
+      <find>10001</find>
+      <find>10000</find>
+      <find>adjustShape</find>
+      <find>createCircleEditor</find>
+      <find>isRingInRing</find>
+      <find>editor._circleEditor</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -242,15 +253,17 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/map3.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Point.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/Shape.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/test.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/pojo/ShapeTypeEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/test.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawInnerShape.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/drawInnerShpae.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js" />
       </list>
     </option>
@@ -288,8 +301,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,7 +319,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -540,7 +553,8 @@
       <workItem from="1594099496499" duration="1668000" />
       <workItem from="1594706112344" duration="16054000" />
       <workItem from="1594774084792" duration="27537000" />
-      <workItem from="1594857411976" duration="16909000" />
+      <workItem from="1594857411976" duration="30257000" />
+      <workItem from="1594947996471" duration="16221000" />
     </task>
     <task id="LOCAL-00001" summary="refactor code.">
       <created>1592380432012</created>
@@ -577,11 +591,25 @@
       <option name="project" value="LOCAL" />
       <updated>1594722091427</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="use a new way implementation the electronic-fence.">
+      <created>1594883305609</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594883305609</updated>
+    </task>
+    <task id="LOCAL-00007" summary="use a new way implementation the electronic-fence.">
+      <created>1594883393557</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594883393557</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154019000" />
+    <option name="totallyTimeSpent" value="183588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1036" extended-state="0" />
@@ -597,7 +625,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50328225" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3522976" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -634,7 +662,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50328225" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3522976" sideWeight="0.4978701" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -646,7 +674,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16042781" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16042781" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -673,11 +701,12 @@
     <MESSAGE value="commit the code related to customize draw polygon." />
     <MESSAGE value="finish the code related to customize draw circle and polygon." />
     <MESSAGE value="refactor code." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor code." />
+    <MESSAGE value="use a new way implementation the electronic-fence." />
+    <option name="LAST_COMMIT_MESSAGE" value="use a new way implementation the electronic-fence." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="44" />
+      <option name="time" value="59" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -686,7 +715,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/map3_backup.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -754,7 +782,7 @@
             <element signature="docComment;method#test#0;class#MapController#0" expanded="false" />
             <element signature="method#test#0;class#MapController#0" expanded="false" />
             <element signature="docComment;method#getShape#0;class#MapController#0" expanded="false" />
-            <element signature="e#1247#1260#0" expanded="false" />
+            <element signature="e#1267#1280#0" expanded="false" />
             <element signature="method#getShape#0;class#MapController#0" expanded="false" />
             <element signature="docComment;method#saveShape#0;class#MapController#0" expanded="false" />
           </folding>
@@ -826,7 +854,7 @@
             <element signature="docComment;method#test#0;class#MapController#0" expanded="false" />
             <element signature="method#test#0;class#MapController#0" expanded="false" />
             <element signature="docComment;method#getShape#0;class#MapController#0" expanded="false" />
-            <element signature="e#1247#1260#0" expanded="false" />
+            <element signature="e#1267#1280#0" expanded="false" />
             <element signature="method#getShape#0;class#MapController#0" expanded="false" />
             <element signature="docComment;method#saveShape#0;class#MapController#0" expanded="false" />
           </folding>
@@ -907,7 +935,7 @@
             <element signature="docComment;method#test#0;class#MapController#0" expanded="false" />
             <element signature="method#test#0;class#MapController#0" expanded="false" />
             <element signature="docComment;method#getShape#0;class#MapController#0" expanded="false" />
-            <element signature="e#1247#1260#0" expanded="false" />
+            <element signature="e#1267#1280#0" expanded="false" />
             <element signature="method#getShape#0;class#MapController#0" expanded="false" />
             <element signature="docComment;method#saveShape#0;class#MapController#0" expanded="false" />
           </folding>
@@ -978,7 +1006,7 @@
             <element signature="docComment;method#test#0;class#MapController#0" expanded="false" />
             <element signature="method#test#0;class#MapController#0" expanded="false" />
             <element signature="docComment;method#getShape#0;class#MapController#0" expanded="false" />
-            <element signature="e#1247#1260#0" expanded="false" />
+            <element signature="e#1267#1280#0" expanded="false" />
             <element signature="method#getShape#0;class#MapController#0" expanded="false" />
             <element signature="docComment;method#saveShape#0;class#MapController#0" expanded="false" />
           </folding>
@@ -1068,6 +1096,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
           <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1107,6 +1136,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,10 +1189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="e#394#395#0" expanded="false" />
-            <element signature="e#421#422#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1200,37 +1226,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="112" lean-forward="false" selection-start-line="18" selection-start-column="112" selection-end-line="18" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="70" column="24" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-          <folding>
-            <element signature="docComment;class#MapController#0" expanded="false" />
-            <element signature="e#474#485#0" expanded="false" />
-            <element signature="docComment;method#drawCircleAndPolygon#0;class#MapController#0" expanded="false" />
-            <element signature="method#drawCircleAndPolygon#0;class#MapController#0" expanded="false" />
-            <element signature="docComment;method#test#0;class#MapController#0" expanded="false" />
-            <element signature="method#test#0;class#MapController#0" expanded="false" />
-            <element signature="docComment;method#getShape#0;class#MapController#0" expanded="false" />
-            <element signature="e#1247#1260#0" expanded="false" />
-            <element signature="method#getShape#0;class#MapController#0" expanded="false" />
-            <element signature="docComment;method#saveShape#0;class#MapController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/dao/MySqlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="163" column="9" lean-forward="true" selection-start-line="158" selection-start-column="8" selection-end-line="163" selection-end-column="9" />
+        <state relative-caret-position="475">
+          <caret line="153" column="23" lean-forward="false" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
           <folding>
             <element signature="docComment;class#MySqlUtils#0" expanded="false" />
             <element signature="docComment;method#getConn#0;class#MySqlUtils#0" expanded="false" />
@@ -1254,42 +1253,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/test.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#json2arr#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="650">
+          <caret line="26" column="94" lean-forward="false" selection-start-line="26" selection-start-column="94" selection-end-line="26" selection-end-column="94" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawCircleAndPolygon.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/controller/MapController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="25" column="90" lean-forward="false" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="70" column="22" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;class#MapController#0" expanded="false" />
+            <element signature="e#474#485#0" expanded="false" />
+            <element signature="docComment;method#drawCircleAndPolygon#0;class#MapController#0" expanded="false" />
+            <element signature="method#drawCircleAndPolygon#0;class#MapController#0" expanded="false" />
+            <element signature="docComment;method#test#0;class#MapController#0" expanded="false" />
+            <element signature="method#test#0;class#MapController#0" expanded="false" />
+            <element signature="docComment;method#getShape#0;class#MapController#0" expanded="false" />
+            <element signature="e#1267#1280#0" expanded="false" />
+            <element signature="method#getShape#0;class#MapController#0" expanded="false" />
+            <element signature="docComment;method#saveShape#0;class#MapController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gaode/route/service/MapService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="47" />
+        <state relative-caret-position="725">
+          <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
           <folding>
             <element signature="docComment;class#MapService#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="473" column="0" lean-forward="false" selection-start-line="473" selection-start-column="0" selection-end-line="473" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/map/drawInnerShape.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/drawInnerShpae.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="206" column="13" lean-forward="true" selection-start-line="204" selection-start-column="12" selection-end-line="206" selection-end-column="13" />
+          <folding>
+            <element signature="e#296#336#0" expanded="false" />
+            <element signature="e#370#412#0" expanded="false" />
+            <element signature="n#!!block;n#loadShape#0" expanded="false" />
+            <element signature="e#450#992#0" expanded="false" />
+            <element signature="e#1007#1939#0" expanded="false" />
+            <element signature="n#!!block;n#clickOnMap#0" expanded="false" />
+            <element signature="n#!!block;n#saveShape#0" expanded="false" />
+            <element signature="n#!!block;n#clearShape#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygon#0" expanded="false" />
+            <element signature="n#!!block;n#createCircle#0" expanded="false" />
+            <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
+            <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
+            <element signature="n#!!block;n#endEditor#0" expanded="false" />
+            <element signature="n#!!block;n#closeEditor#0" expanded="false" />
+            <element signature="n#!!block;n#clearMarker#0" expanded="false" />
+            <element signature="n#!!block;n#addMarker#0" expanded="false" />
+            <element signature="n#!!block;n#adjustShape#0" expanded="false" />
+            <element signature="n#!!block;n#json2arr#0" expanded="false" />
+            <element signature="n#!!block;n#isRingInRing#0" expanded="false" />
+            <element signature="n#!!block;n#convertCircleToPolygon#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/drawCircleAndPolygon.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="51" column="3" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
+        <state relative-caret-position="643">
+          <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
           <folding>
             <element signature="e#322#362#0" expanded="false" />
             <element signature="e#396#1423#0" expanded="false" />
-            <element signature="e#409#1397#0" expanded="false" />
             <element signature="n#!!block;n#openEditor#0" expanded="false" />
             <element signature="n#!!block;n#closeEditor#0" expanded="false" />
             <element signature="n#!!block;n#endEditor#0" expanded="false" />
@@ -1301,10 +1353,8 @@
             <element signature="n#!!block;n#createPolygonEditor#0" expanded="false" />
             <element signature="n#!!block;n#createCircleEditor#0" expanded="false" />
             <element signature="n#!!block;n#saveShape#0" expanded="false" />
-            <element signature="e#5394#5644#0" expanded="false" />
-            <element signature="e#5650#5766#0" expanded="false" />
-            <element signature="e#5779#6010#0" expanded="false" />
             <element signature="n#!!block;n#clearShape#0" expanded="false" />
+            <element signature="n#!!block;n#clearMap#0" expanded="false" />
             <element signature="n#!!block;n#json2arr#0" expanded="false" />
           </folding>
         </state>

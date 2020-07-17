@@ -71,16 +71,18 @@ function openEditor() {
             if (!isEditShape && (null == circleClickListener || undefined == circleClickListener)) {
                 circleClickListener = AMap.event.addListener(map, "click", clickOnMap);
             }
+            if (undefined == editor._circleEditor) {
+                createCircleEditor();
+            }
             editor._circleEditor.open();
         } else {
             if (!isEditShape && (null == polygonClickListener || undefined == polygonClickListener)) {
                 polygonClickListener = AMap.event.addListener(map, "click", clickOnMap);
             }
+            if (undefined == editor._polygonEditor) {
+                createPolygonEditor();
+            }
             editor._polygonEditor.open();
-        }
-
-        if(isClearShape){
-            map.clearMap();
         }
     }
 }
@@ -225,7 +227,7 @@ function clearShape() {
     isClearShape = true;
     isEditShape = false;
 
-    map.clearMap();
+    clearMap();
 
     $("#drawShape").val(0);
     $("#drawShape").removeAttr("disabled");
@@ -237,6 +239,16 @@ function clearShape() {
     $("#startDraw").css("color", "white");
     $("#endDraw").attr("disabled", true);
     $("#endDraw").css("color", "gray");
+}
+
+function clearMap() {
+    if ("1" == drawShapeType) {
+        editor._circleEditor.close();
+        map.remove(editor._circle);
+    } else {
+        editor._polygonEditor.close();
+        map.remove(editor._polygon);
+    }
 }
 
 //格式转换

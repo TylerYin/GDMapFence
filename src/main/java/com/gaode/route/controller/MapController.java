@@ -35,10 +35,10 @@ public class MapController {
      * 多边形查询
      * @return
      */
-    @RequestMapping(value = "/test")
+    @RequestMapping(value = "/drawInnerShape")
     public String test(HttpServletRequest request, HttpServletResponse response, Model model) {
         System.out.println("spring mvc hello world!");
-        return "map/test";
+        return "map/drawInnerShape";
     }
 
     /***
