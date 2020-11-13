@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!doctype html>
 <html>
 <head>
@@ -21,13 +21,13 @@
             <option style="height: 25px;" value="1">绘制圆形</option>
             <option style="height: 25px;" value="2">绘制多边形</option>
         </select>
-        <input name="startDraw" id="startDraw" type="button" class="button" value="开始绘制" onClick="openEditor();" style="width: 110px; background-color: #0D9BF2;"/>
-        <input name="endDraw" id="endDraw" type="button" class="button" value="结束绘制" onClick="closeEditor();" style="width: 110px; background-color: #0D9BF2;"/>
-        <input name="save" id="save" type="button" class="button" value="保存" onClick="saveShape();" style="width: 110px; background-color: #0D9BF2;"/>
+        <input name="startDraw" id="startDraw" type="button" class="button" value="开始绘制" onClick="openEditor();" style="width: 80px; background-color: #0D9BF2;"/>
+        <input name="endDraw" id="endDraw" type="button" class="button" value="结束绘制" onClick="closeEditor();" style="width: 80px; background-color: #0D9BF2;"/>
+        <input name="save" id="save" type="button" class="button" value="保存" onClick="saveShape();" style="width: 80px; background-color: #0D9BF2;"/>
         <input name="clear" id="clear" type="button" class="button" value="清除" onClick="clearShape();" style="width: 80px; background-color: #0D9BF2;"/>
     </div>
 </div>
 </body>
 <input type="hidden" value="${pageContext.request.contextPath}" id="contextPath">
-<script src="${pageContext.request.contextPath}/static/drawCircleAndPolygon.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/static/drawInnerShape.js" type="text/javascript"></script>
 </html>

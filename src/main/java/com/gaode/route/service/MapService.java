@@ -1,9 +1,14 @@
 package com.gaode.route.service;
 
 import com.gaode.route.dao.MySqlUtils;
+import com.gaode.route.pojo.Point;
 import com.gaode.route.pojo.Shape;
+import com.gaode.route.pojo.ShapeTypeEnum;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,55 +17,61 @@ import javax.servlet.http.HttpServletRequest;
  * @Description
  * @Author Tyler Yin
  */
+@Service
 public class MapService {
-
-    private final static String PARENT_DEALER_ID = "10000";
-
-    public static String getPolygon() {
-        return MySqlUtils.getPolygon();
+    public Shape getShape(String dealerId) {
+        return MySqlUtils.getShape(dealerId);
     }
 
-    public static void savePolygon(HttpServletRequest request) {
+    public void saveShape(HttpServletRequest request) {
+        int drawShapeType = Integer.valueOf(request.getParameter("drawShapeType"));
+        if (ShapeTypeEnum.CIRCLE.getType() == drawShapeType) {
+            saveCircle(request);
+        } else {
+            savePolygon(request);
+        }
+    }
+
+    private void savePolygon(HttpServletRequest request) {
         String dealerId = request.getParameter("dealerId");
         String polyData = request.getParameter("polygonData");
         String[] polyDataArray = polyData.split(";");
 
-        // 测试用，只删除上级经销商的电子围栏区域
-        if (dealerId.equals(PARENT_DEALER_ID)) {
-            MySqlUtils.deleteShape("2");
-        }
+        Shape shape = new Shape();
+        shape.setDealerId(dealerId);
 
+        List<Point> points = new ArrayList<>();
         for (String po : polyDataArray) {
             String[] pos = po.split(",");
-            Shape point = new Shape();
+            Point point = new Point();
             point.setLng(new BigDecimal(pos[0]));
             point.setLat(new BigDecimal(pos[1]));
-            point.setDealerId(dealerId);
-            MySqlUtils.savePolygon(point);
+            points.add(point);
         }
+        shape.setPoints(points);
+
+        MySqlUtils.deleteShape(null, dealerId);
+        MySqlUtils.savePolygon(shape);
     }
 
-    public static Shape getCircle() {
-        return MySqlUtils.getCircle();
-    }
-
-    public static void saveCircle(HttpServletRequest request) {
+    private void saveCircle(HttpServletRequest request) {
         String dealerId = request.getParameter("dealerId");
         String circleRadius = request.getParameter("circleRadius");
         String circleCenterLng = request.getParameter("circleCenterLng");
         String circleCenterLat = request.getParameter("circleCenterLat");
 
         Shape shape = new Shape();
-        shape.setLng(new BigDecimal(circleCenterLng));
-        shape.setLat(new BigDecimal(circleCenterLat));
         shape.setRadius(new BigDecimal(circleRadius));
         shape.setDealerId(dealerId);
 
-        // 测试用，只删除上级经销商的电子围栏区域
-        if (shape.getDealerId().equals(PARENT_DEALER_ID)) {
-            MySqlUtils.deleteShape("1");
-        }
+        List<Point> points = new ArrayList<>();
+        Point point = new Point();
+        point.setLng(new BigDecimal(circleCenterLng));
+        point.setLat(new BigDecimal(circleCenterLat));
+        points.add(point);
+        shape.setPoints(points);
 
+        MySqlUtils.deleteShape(null, dealerId);
         MySqlUtils.saveCircle(shape);
     }
 }

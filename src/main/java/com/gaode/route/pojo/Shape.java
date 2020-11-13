@@ -2,6 +2,8 @@ package com.gaode.route.pojo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Description POJO
@@ -14,10 +16,10 @@ public class Shape implements Serializable {
     private int id;
     private String dealerId;
     private String companyId;
-    private BigDecimal lng;
-    private BigDecimal lat;
-    private BigDecimal radius;
+
     private int type;
+    private BigDecimal radius;
+    private List<Point> points = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -43,20 +45,12 @@ public class Shape implements Serializable {
         this.companyId = companyId;
     }
 
-    public BigDecimal getLng() {
-        return lng;
+    public int getType() {
+        return type;
     }
 
-    public void setLng(BigDecimal lng) {
-        this.lng = lng;
-    }
-
-    public BigDecimal getLat() {
-        return lat;
-    }
-
-    public void setLat(BigDecimal lat) {
-        this.lat = lat;
+    public void setType(int type) {
+        this.type = type;
     }
 
     public BigDecimal getRadius() {
@@ -67,11 +61,11 @@ public class Shape implements Serializable {
         this.radius = radius;
     }
 
-    public int getType() {
-        return type;
+    public List<Point> getPoints() {
+        return points;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setPoints(List<Point> points) {
+        this.points = points;
     }
 }
