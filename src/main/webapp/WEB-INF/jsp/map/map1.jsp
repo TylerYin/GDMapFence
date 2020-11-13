@@ -14,8 +14,8 @@
     <title>编辑折线、多边形、圆</title>
     <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
     <script src="http://webapi.amap.com/maps?v=1.4.6&key=48ac9b440beba27121085f08501a0353&plugin=AMap.PolyEditor,AMap.CircleEditor"></script>
-    <script src="http://cache.amap.com/lbs/static/addToolbar.js" type="text/javascript" ></script>
-    <script src="http://127.0.0.1:8080/gaode/static/jquery-1.8.0.min.js"></script>
+    <script src="http://cache.amap.com/lbs/static/addToolbar.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div id="container"></div>
@@ -28,9 +28,10 @@
     <input type="button" class="button" value="结束编辑圆" onClick="editor.closeEditCircle()"/>
 </div>
 <script>
-    var datas;
+    var dataArray;
+    var editorTool;
     pullUpAction();
-    var editorTool, map = new AMap.Map("container", {
+    var map = new AMap.Map("container", {
         resizeEnable: true,
         //center: [116.403322, 39.900255],//地图中心点
         zoom: 13 //地图显示的缩放级别
@@ -41,9 +42,7 @@
     editor._line = (function () {
         var lineArr = [
             [116.368904, 39.913423],
-            [116.382122, 39.901176],
-            [116.387271, 39.912501],
-            [116.388258, 39.904600]
+            [116.382122, 39.901176]
         ];
         return new AMap.Polyline({
             map: map,
@@ -55,24 +54,26 @@
         });
     })();
 
-    editor._polygon = (function () {
-        var arr = [ //构建多边形经纬度坐标数组
-            [116.403322, 39.920255],
-            [116.410703, 39.897555],
-            [116.402292, 39.892353],
-            [116.389846, 39.891365]
-        ]
-        return new AMap.Polygon({
-            map: map,
-            path: datas,
-            strokeColor: "#0000ff",
-            strokeOpacity: 1,
-            strokeWeight: 3,
-            fillColor: "#f5deb3",
-            fillOpacity: 0.35
-        });
-    })();
+    //在地图上绘制多边形
+//    editor._polygon = (function () {
+//        var arr = [
+//            [116.403322, 39.920255],
+//            [116.410703, 39.897555],
+//            [116.402292, 39.892353],
+//            [116.389846, 39.891365]
+//        ];
+//        return new AMap.Polygon({
+//            map: map,
+//            path: arr,
+//            strokeColor: "#0000ff",
+//            strokeOpacity: 1,
+//            strokeWeight: 3,
+//            fillColor: "#f5deb3",
+//            fillOpacity: 0.35
+//        });
+//    })();
 
+    //在地图上绘制圆
 //    editor._circle = (function () {
 //        var circle = new AMap.Circle({
 //            center: [116.433322, 39.900255],// 圆心位置
@@ -89,37 +90,37 @@
 
     map.setFitView();
     editor._lineEditor = new AMap.PolyEditor(map, editor._line);
-    editor._polygonEditor = new AMap.PolyEditor(map, editor._polygon);
-    //editor._circleEditor = new AMap.CircleEditor(map, editor._circle);
+//    editor._polygonEditor = new AMap.PolyEditor(map, editor._polygon);
+//    editor._circleEditor = new AMap.CircleEditor(map, editor._circle);
 
     editor.startEditLine = function () {
         editor._lineEditor.open();
-    }
+    };
 
     editor.closeEditLine = function () {
         editor._lineEditor.close();
-    }
+    };
 
     editor.startEditPolygon = function () {
         editor._polygonEditor.open();
-    }
+    };
 
     editor.closeEditPolygon = function () {
         editor._polygonEditor.close();
-    }
+    };
 
     editor.startEditCircle = function () {
         editor._circleEditor.open();
-    }
+    };
 
     editor.closeEditCircle = function () {
         editor._circleEditor.close();
-    }
+    };
 
-    //    AMap.event.addListener(editor._polygonEditor,"end",function(type,target){
-    // 回头看看我们用过的，画图时
-    //  	alert(type);
-    //	});
+    AMap.event.addListener(editor._polygonEditor, "end", function (type, target) {
+        //回头看看我们用过的，画图时
+        alert(type);
+    });
 
     AMap.event.addListener(editor._polygonEditor, 'end', function (res) {
         alert(res.target);
@@ -129,14 +130,14 @@
         var param = {"pagenum": 1, "infos": 2};
         $.ajax({
             //url:"/spring_mvc/api/peizhiinfo", //后台处理程序
-            url: "getPoly", //后台处理程序
-            type: 'post',         //数据发送方式
+            url: "getPoly",
+            type: 'post',
             dataType: 'json',
             data: param,
             async: true,
             success: function (data) {
-                datas = data;
-                createPolygon(datas);
+                dataArray = data;
+                createPolygon(dataArray);
                 //  var result = "" ;
                 //  var i=0;
                 //  $(data).each(function(){

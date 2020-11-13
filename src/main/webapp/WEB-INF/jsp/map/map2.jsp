@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
     <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
     <script src="http://webapi.amap.com/maps?v=1.4.6&key=48ac9b440beba27121085f08501a0353"></script>
-    <script src="http://cache.amap.com/lbs/static/addToolbar.js" type="text/javascript" ></script>
+    <script src="http://cache.amap.com/lbs/static/addToolbar.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="header">
